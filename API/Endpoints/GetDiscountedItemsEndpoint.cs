@@ -5,11 +5,11 @@ namespace API.Endpoints;
 
 public class GetDiscountedItemsEndpoint:EndpointWithoutRequest
 {
-    private IIcaService _icaService;
+    private readonly IStoreServiceFactory _storeServiceFactory;
 
-    public GetDiscountedItemsEndpoint(IIcaService icaService)
+    public GetDiscountedItemsEndpoint(IStoreServiceFactory storeServiceFactory)
     {
-        _icaService = icaService;
+        _storeServiceFactory = storeServiceFactory;
     }
 
     public override void Configure()
@@ -20,7 +20,8 @@ public class GetDiscountedItemsEndpoint:EndpointWithoutRequest
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        _icaService.GetDiscountedProducts();
+        var storeService = _storeServiceFactory.Create("Willys");
+        storeService.GetDiscountedProducts();
         await SendOkAsync();
     }
 }

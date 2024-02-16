@@ -7,11 +7,16 @@ public class ProductRecord
 {
     public int Id { get; set; }
     public string Name { get; set; }
+    public string Brand { get; set; }
     public string Description { get; set; }
-    public double Price { get; set; }
-    public double DiscountedPrice { get; set; }
+    public decimal Price { get; set; }
+    public decimal DiscountedPrice { get; set; }
+    public decimal Quantity { get; set; }
+    public string QuantityUnit { get; set; }
+    public int MaxItems { get; set; }
+    public bool IsMemberOffer { get; set; }
     public Store Store { get; set; }
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
-    
+    //Hade varit nice att hämta bilden och spara nånstans?
 }
