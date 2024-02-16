@@ -3358,24 +3358,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\khenr\\.nuget\\packages\\": {}
+    "C:\\Users\\HenrikJohansson\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\khenr\\RiderProjects\\Examensarbete\\API\\API.csproj",
+      "projectUniqueName": "C:\\dev\\examensarbete\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\khenr\\RiderProjects\\Examensarbete\\API\\API.csproj",
-      "packagesPath": "C:\\Users\\khenr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\khenr\\RiderProjects\\Examensarbete\\API\\obj\\",
+      "projectPath": "C:\\dev\\examensarbete\\API\\API.csproj",
+      "packagesPath": "C:\\Users\\HenrikJohansson\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\examensarbete\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\khenr\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\HenrikJohansson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3434,7 +3437,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200-preview.23624.5/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
