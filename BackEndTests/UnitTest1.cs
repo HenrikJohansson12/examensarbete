@@ -1,9 +1,15 @@
+using API.Properties.Services;
+
 namespace BackEndTests;
 
-public class UnitTest1
+public class WillysServiceTest
 {
     [Fact] 
-    public void Test1()
+    public void WillysJsonIsConvertedCorrectly()
     {
+        var willysService = new WillysService();
+        
+        
+        
     }
 }
