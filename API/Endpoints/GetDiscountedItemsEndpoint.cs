@@ -20,7 +20,7 @@ public class GetDiscountedItemsEndpoint:EndpointWithoutRequest
 
     public override async Task HandleAsync(CancellationToken ct)
     {
-        var storeService = _storeServiceFactory.Create("Willys");
+        var storeService = _storeServiceFactory.Create("Ica");
         storeService.GetDiscountedProducts();
         await SendOkAsync();
     }

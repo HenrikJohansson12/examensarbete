@@ -90,7 +90,7 @@ public class Offer2
 
 public class Original
 {
-    public string amount { get; set; }
+    public string? amount { get; set; }
     public string currency { get; set; }
 }
 

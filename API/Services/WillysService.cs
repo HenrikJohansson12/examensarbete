@@ -66,6 +66,11 @@ public class WillysService:IStoreService
             
         }
 
+        int minItems = 0;
+        if (result.potentialPromotions.FirstOrDefault().realMixAndMatch)
+        {
+            minItems = result.potentialPromotions.FirstOrDefault().qualifyingCount.Value;
+        }
         if (result.potentialPromotions.FirstOrDefault().campaignType == "LOYALTY")
         {
             isMemberOffer = true;
@@ -78,6 +83,7 @@ public class WillysService:IStoreService
             QuantityUnit = unit,
             Price = Convert.ToDecimal(result.price),
             DiscountedPrice = Convert.ToDecimal(result.potentialPromotions[0].price),
+            MinItems = minItems,
             MaxItems = Convert.ToInt32(result.potentialPromotions[0].redeemLimit),
             IsMemberOffer = isMemberOffer,
             StartDate = startDate,

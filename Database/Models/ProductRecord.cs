@@ -13,10 +13,13 @@ public class ProductRecord
     public decimal DiscountedPrice { get; set; }
     public decimal Quantity { get; set; }
     public string QuantityUnit { get; set; }
+    public int  MinItems { get; set; }
     public int MaxItems { get; set; }
     public bool IsMemberOffer { get; set; }
     public Store Store { get; set; }
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
+
+    
     //Hade varit nice att hämta bilden och spara nånstans?
 }
