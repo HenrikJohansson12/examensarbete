@@ -6,19 +6,21 @@ using Newtonsoft.Json.Linq;
 
 namespace API.Properties.Services;
 
-
-
 public class IcaService : IStoreService
 {
+    private readonly HttpClient _httpClient;
+    public static List<ProductRecord> productRecords = new();
+    public IcaService(HttpClient httpClient)
+    {
+        _httpClient = httpClient;
+    }
+    
     public async void GetDiscountedProducts()
     {
-
-        using (HttpClient httpClient = new HttpClient())
-        {
-            var productList = new List<Product>();
+        var productList = new List<Product>();
             //Hämtar json strängen
             string apiResponse =
-                await httpClient.GetStringAsync("https://handlaprivatkund.ica.se/stores/1004101/api/v5/products/");
+                await _httpClient.GetStringAsync("https://handlaprivatkund.ica.se/stores/1004101/api/v5/products/");
 
             //Deserialiserar den till objekt. 
             IcaRoot? icaRoot =
@@ -50,7 +52,7 @@ public class IcaService : IStoreService
                     decorateProductIds = decorateProductIds + dividedLists[i][j] + ",";
                 }
 
-                string productResponse = await httpClient.GetStringAsync(
+                string productResponse = await _httpClient.GetStringAsync(
                     "https://handlaprivatkund.ica.se/stores/1004101/api/v5/products/decorate?productIds=" +
                     decorateProductIds);
                 IcaProducts? icaProducts =
@@ -62,7 +64,7 @@ public class IcaService : IStoreService
 
             foreach (var product in productList)
             {
-                productRecordList.Add(CreateProductRecord(product));
+                productRecords.Add(CreateProductRecord(product));
             }
             
             Console.WriteLine("ss");
@@ -85,7 +87,7 @@ public class IcaService : IStoreService
             }
             return dividedLists;
         }
-    }
+    
 
     private ProductRecord CreateProductRecord(Product product)
     {

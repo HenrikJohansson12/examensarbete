@@ -2,6 +2,7 @@
 
 public interface IStoreService
 {
+    
     void GetDiscountedProducts();
     
 }
