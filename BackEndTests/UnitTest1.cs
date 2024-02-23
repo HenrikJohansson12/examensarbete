@@ -1,5 +1,6 @@
 using System.Net;
 using API.Properties.Services;
+using API.Requests;
 using Moq;
 namespace BackEndTests;
 using System.IO;
@@ -35,13 +36,17 @@ public class WillysServiceTest
     public  void WillysJsonIsConvertedCorrectly()
     {
         string jsonContent = File.ReadAllText("willysresponse.json");
+        var req = new GetDiscountedItemsWillysRequest
+        {
+            StoreId = 1
+        };
         var http = new HttpClient( new HttpMessageHandlerMock(new HttpResponseMessage()
         {
             StatusCode = HttpStatusCode.OK,
             Content = new StringContent(jsonContent)
         }));
         var service = new WillysService(http);
-      service.GetDiscountedProducts();
+      service.GetDiscountedProducts(req);
 
       var result = service.GetProductRecords();
       

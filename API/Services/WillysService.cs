@@ -40,9 +40,10 @@ public class WillysService : IWillysService
             if (willysRoot.results.Count == willysRoot.pagination.pageSize)
             {
                 Console.WriteLine("Alla produkter är INTE med");
+                return false;
             }
-
-            productList.AddRange(willysRoot.results);
+        
+        productList.AddRange(willysRoot.results);
             
         foreach (var product in productList)
         {
@@ -53,19 +54,26 @@ public class WillysService : IWillysService
     }
 
     private ProductRecord CreateProductRecord(Result result)
+    {
+        int offerType;
+        //First we need to determine what kind of offer it is. 
+        if (result.potentialPromotions.FirstOrDefault().realMixAndMatch)
         {
-
-            string format = "dd/MM-yyyy";
-            CultureInfo provider = CultureInfo.InvariantCulture;
-            DateOnly startDate;
-            DateOnly.TryParseExact(result.potentialPromotions.FirstOrDefault().startDate, format, provider,
-                DateTimeStyles.None, out startDate);
-            DateOnly endDate;
-            DateOnly.TryParseExact(result.potentialPromotions.FirstOrDefault().endDate, format, provider,
-                DateTimeStyles.None, out endDate);
-
-
-            bool isMemberOffer = false;
+            offerType = (int)(OfferType.MultiBuyOffer);
+        }
+      else if (result.priceUnit == "kr/kg")
+        {
+            offerType = (int)(OfferType.PerKiloGram);
+        }
+        
+        else if (result.priceUnit == "kr/st")
+        {
+            offerType = (int)(OfferType.PerProduct);
+        }
+        else offerType = (int)(OfferType.None);
+        
+        
+          
             int quantity = 0;
             string unit = "";
             var pattern = @"\d+";
@@ -87,14 +95,24 @@ public class WillysService : IWillysService
             {
                 minItems = result.potentialPromotions.FirstOrDefault().qualifyingCount.Value;
             }
-
+            
+            bool isMemberOffer = false;
             if (result.potentialPromotions.FirstOrDefault().campaignType == "LOYALTY")
             {
                 isMemberOffer = true;
             }
-
+    
+            string format = "dd/MM-yyyy";
+            CultureInfo provider = CultureInfo.InvariantCulture;
+            DateOnly startDate;
+            DateOnly.TryParseExact(result.potentialPromotions.FirstOrDefault().startDate, format, provider,
+                DateTimeStyles.None, out startDate);
+            DateOnly endDate;
+            DateOnly.TryParseExact(result.potentialPromotions.FirstOrDefault().endDate, format, provider,
+                DateTimeStyles.None, out endDate);
             var productRecord = new ProductRecord()
             {
+                OfferType = offerType,
                 Name = result.name,
                 Brand = result.manufacturer,
                 Quantity = quantity,
