@@ -2,11 +2,16 @@ using System.Globalization;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using API.Models;
+using API.Requests;
 using Database.Models;
 
 namespace API.Properties.Services;
 
-public class WillysService : IStoreService
+public interface IWillysService
+{
+    Task<bool> GetDiscountedProducts(GetDiscountedItemsWillysRequest req);
+}
+public class WillysService : IWillysService
 {
     private readonly HttpClient _httpClient;
     private List<ProductRecord> _productRecords = new List<ProductRecord>();
@@ -18,32 +23,33 @@ public class WillysService : IStoreService
     {
         return _productRecords;
     }
-    public async void GetDiscountedProducts()
+    public async Task<bool> GetDiscountedProducts(GetDiscountedItemsWillysRequest req)
     {
         var productList = new List<Result>();
 
-        string apiResponse =
-            await _httpClient.GetStringAsync(
+        var result =
+            await _httpClient.GetAsync(
                 "https://www.willys.se/search/campaigns/offline?page=0&q=2103&size=250&type=PERSONAL_GENERAL&avoidCache=1708079169569");
-        WillysRoot? willysRoot = JsonSerializer.Deserialize<WillysRoot>(apiResponse);
-
-        if (willysRoot.results.Count == willysRoot.pagination.pageSize)
+        if (!result.IsSuccessStatusCode)
         {
-            Console.WriteLine("Alla produkter är INTE med");
+            return false;
         }
 
-        productList.AddRange(willysRoot.results);
+        string apiResponse = await result.Content.ReadAsStringAsync();
+            WillysRoot? willysRoot = JsonSerializer.Deserialize<WillysRoot>(apiResponse);
+            if (willysRoot.results.Count == willysRoot.pagination.pageSize)
+            {
+                Console.WriteLine("Alla produkter är INTE med");
+            }
 
-
-
-
+            productList.AddRange(willysRoot.results);
+            
         foreach (var product in productList)
         {
             _productRecords.Add(CreateProductRecord(product));
         }
-
-        Console.Read();
-
+        
+        return true;
     }
 
     private ProductRecord CreateProductRecord(Result result)

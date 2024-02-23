@@ -5,11 +5,8 @@ using FastEndpoints.Swagger; //add this
 var builder = WebApplication.CreateBuilder();
 builder.Services.AddFastEndpoints();
 builder.Services.SwaggerDocument(); //add this
-builder.Services.AddScoped<IStoreServiceFactory, StoreServiceFactory>();
-builder.Services.AddSingleton<IcaService>();
-builder.Services.AddSingleton<WillysService>();
-builder.Services.AddScoped<HttpClient>();
-
+builder.Services.AddScoped<IWillysService,WillysService>();
+builder.Services.AddSingleton<HttpClient>();
 
 var app = builder.Build();
 app.UseFastEndpoints();

@@ -1,3 +1,4 @@
+using System.Data.SqlTypes;
 using API.Models;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -6,7 +7,11 @@ using Newtonsoft.Json.Linq;
 
 namespace API.Properties.Services;
 
-public class IcaService : IStoreService
+public interface IIcaService
+{
+    
+}
+public class IcaService : IIcaService
 {
     private readonly HttpClient _httpClient;
     public static List<ProductRecord> productRecords = new();
@@ -15,7 +20,7 @@ public class IcaService : IStoreService
         _httpClient = httpClient;
     }
     
-    public async void GetDiscountedProducts()
+    public async Task<bool> GetDiscountedProducts()
     {
         var productList = new List<Product>();
             //Hämtar json strängen
@@ -69,8 +74,8 @@ public class IcaService : IStoreService
             
             Console.WriteLine("ss");
             //Todo normalisera datat mellan willys och ica och spara i en databas. 
-
-        }
+            return true;
+    }
 
         //todo Kolla så den här metoden verkligen fungerar. 
         static List<List<T>> DivideList<T>(List<T> sourceList, int chunkSize)
@@ -202,6 +207,7 @@ public class IcaService : IStoreService
         }
         */
     }
+    
 }
  
 
