@@ -70,10 +70,10 @@ public class WillysService : IWillysService
         {
             offerType = (int)(OfferType.PerProduct);
         }
+        
         else offerType = (int)(OfferType.None);
         
         
-          
             int quantity = 0;
             string unit = "";
             var pattern = @"\d+";
@@ -101,7 +101,7 @@ public class WillysService : IWillysService
             {
                 isMemberOffer = true;
             }
-    
+            //Parse the dates. 
             string format = "dd/MM-yyyy";
             CultureInfo provider = CultureInfo.InvariantCulture;
             DateOnly startDate;
@@ -110,6 +110,9 @@ public class WillysService : IWillysService
             DateOnly endDate;
             DateOnly.TryParseExact(result.potentialPromotions.FirstOrDefault().endDate, format, provider,
                 DateTimeStyles.None, out endDate);
+            var price = Convert.ToDecimal(result.price);
+            var discountedPrice = Convert.ToDecimal(result.potentialPromotions.FirstOrDefault().price);
+            
             var productRecord = new ProductRecord()
             {
                 OfferType = offerType,
@@ -117,8 +120,8 @@ public class WillysService : IWillysService
                 Brand = result.manufacturer,
                 Quantity = quantity,
                 QuantityUnit = unit,
-                Price = Convert.ToDecimal(result.price),
-                DiscountedPrice = Convert.ToDecimal(result.potentialPromotions[0].price),
+                Price = price,
+                DiscountedPrice = discountedPrice,
                 MinItems = minItems,
                 MaxItems = Convert.ToInt32(result.potentialPromotions[0].redeemLimit),
                 IsMemberOffer = isMemberOffer,
