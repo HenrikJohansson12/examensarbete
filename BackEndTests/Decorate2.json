@@ -1,0 +1,882 @@
+﻿{
+  "products": [
+    {
+      "productId": "0e2ada18-ae51-4bcb-bed2-b9e92ea6133c",
+      "retailerProductId": "1466015",
+      "name": "Finkrossade Tomater 390g ICA",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41"
+      ],
+      "alternatives": [],
+      "price": {
+        "current": {
+          "amount": "14.90",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "current": {
+            "amount": "38.21",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "ICA",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg",
+        "description": "Finkrossade Tomater 390g ICA",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg",
+          "description": "Finkrossade Tomater 390g ICA",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "4a79f148-731a-477a-b799-3ba382a93db5",
+          "retailerPromotionId": "5003170902-1707753154",
+          "description": "3 för 25 kr",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT",
+          "requiredProductQuantity": 3
+        }
+      ],
+      "offer": {
+        "id": "4a79f148-731a-477a-b799-3ba382a93db5",
+        "description": "3 för 25 kr",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170902-1707753154",
+        "requiredProductQuantity": 3,
+        "presentationMode": "DEFAULT"
+      },
+      "attributes": [
+        {
+          "icon": "nyckelhal",
+          "label": "Nyckelhålet"
+        }
+      ],
+      "size": {
+        "value": "0.39kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "0e2ada18-ae51-4bcb-bed2-b9e92ea6133c",
+      "retailerProductId": "1466015",
+      "name": "Finkrossade Tomater 390g ICA",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41"
+      ],
+      "alternatives": [],
+      "price": {
+        "current": {
+          "amount": "14.90",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "current": {
+            "amount": "38.21",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "ICA",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg",
+        "description": "Finkrossade Tomater 390g ICA",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg",
+          "description": "Finkrossade Tomater 390g ICA",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/774cf06b-40b5-4b15-ab2c-e78486960b41/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "4a79f148-731a-477a-b799-3ba382a93db5",
+          "retailerPromotionId": "5003170902-1707753154",
+          "description": "3 för 25 kr",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT",
+          "requiredProductQuantity": 3
+        }
+      ],
+      "offer": {
+        "id": "4a79f148-731a-477a-b799-3ba382a93db5",
+        "description": "3 för 25 kr",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170902-1707753154",
+        "requiredProductQuantity": 3,
+        "presentationMode": "DEFAULT"
+      },
+      "attributes": [
+        {
+          "icon": "nyckelhal",
+          "label": "Nyckelhålet"
+        }
+      ],
+      "size": {
+        "value": "0.39kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "9e04be9c-65dd-4c77-b34b-4c2b03a46ea8",
+      "retailerProductId": "2093858",
+      "name": "Karins Lasagne 390g Dafgård",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940"
+      ],
+      "alternatives": [],
+      "price": {
+        "current": {
+          "amount": "29.90",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "current": {
+            "amount": "76.67",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "Dafgård",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.jpg",
+        "description": "Karins Lasagne 390g Dafgård",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.jpg",
+          "description": "Karins Lasagne 390g Dafgård",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/b5554fb3-b58a-4967-b01e-722d4062d940/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "770a6b83-98fb-4a0d-a6a3-73c2062da805",
+          "retailerPromotionId": "5003170938-1707753256",
+          "description": "5 för 125 kr -- Max 1 erbj/hushåll, Stammispris",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT",
+          "requiredProductQuantity": 5
+        }
+      ],
+      "offer": {
+        "id": "770a6b83-98fb-4a0d-a6a3-73c2062da805",
+        "description": "5 för 125 kr -- Max 1 erbj/hushåll, Stammispris",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170938-1707753256",
+        "requiredProductQuantity": 5,
+        "presentationMode": "DEFAULT"
+      },
+      "size": {
+        "value": "0.39kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "1b7b1401-ffb3-4a1b-9183-c535e5d30f24",
+      "retailerProductId": "1396068",
+      "name": "Toalettpapper 24-p Miljömärkt ICA",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d"
+      ],
+      "alternatives": [],
+      "price": {
+        "original": {
+          "amount": "119.00",
+          "currency": "SEK"
+        },
+        "current": {
+          "amount": "79.00",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "original": {
+            "amount": "45.91",
+            "currency": "SEK"
+          },
+          "current": {
+            "amount": "30.48",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "ICA",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.jpg",
+        "description": "Toalettpapper 24-p Miljömärkt ICA",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.jpg",
+          "description": "Toalettpapper 24-p Miljömärkt ICA",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/15ee0894-ac5d-4877-a563-6fd0707ed16d/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "69d9a080-cf77-48a3-90c3-06651d0ffeba",
+          "retailerPromotionId": "5003170904-1707753159",
+          "description": "79 kr/st",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT"
+        }
+      ],
+      "offer": {
+        "id": "69d9a080-cf77-48a3-90c3-06651d0ffeba",
+        "description": "79 kr/st",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170904-1707753159",
+        "presentationMode": "DEFAULT"
+      },
+      "attributes": [
+        {
+          "icon": "svanen",
+          "label": "Svanen"
+        }
+      ],
+      "size": {
+        "value": "2.592kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "73396d16-971e-4477-abe5-af5cb0ae5229",
+      "retailerProductId": "1024401",
+      "name": "Skogaholmslimpa skivad 775g Skogaholms",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874"
+      ],
+      "alternatives": [],
+      "price": {
+        "original": {
+          "amount": "27.90",
+          "currency": "SEK"
+        },
+        "current": {
+          "amount": "25.00",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "original": {
+            "amount": "36.00",
+            "currency": "SEK"
+          },
+          "current": {
+            "amount": "32.26",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "Skogaholms",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.jpg",
+        "description": "Skogaholmslimpa skivad 775g Skogaholms",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.jpg",
+          "description": "Skogaholmslimpa skivad 775g Skogaholms",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/a44360ce-77ae-4384-9f06-da368829b874/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "ca8b4699-c006-4d29-b57e-11210e6772f6",
+          "retailerPromotionId": "5003170920-1707753215",
+          "description": "25 kr/st",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT"
+        }
+      ],
+      "offer": {
+        "id": "ca8b4699-c006-4d29-b57e-11210e6772f6",
+        "description": "25 kr/st",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170920-1707753215",
+        "presentationMode": "DEFAULT"
+      },
+      "size": {
+        "value": "0.775kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "d49416ce-29ec-4d13-843d-bcf127d1d570",
+      "retailerProductId": "2032471",
+      "name": "Mild Yoghurt Naturell 3% 1000g Arla Ko®",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa"
+      ],
+      "alternatives": [],
+      "price": {
+        "current": {
+          "amount": "16.90",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "current": {
+            "amount": "16.90",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "Arla Ko",
+      "countryOfOrigin": "Sverige",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.jpg",
+        "description": "Mild Yoghurt Naturell 3% 1000g Arla Ko®",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.jpg",
+          "description": "Mild Yoghurt Naturell 3% 1000g Arla Ko®",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/34680c51-89cc-40f9-b49d-3809420382aa/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "7d74a534-0bad-4e9e-b9a2-e20582ad8616",
+          "retailerPromotionId": "5003170915-1707753198",
+          "description": "2 för 32 kr",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT",
+          "requiredProductQuantity": 2
+        }
+      ],
+      "offer": {
+        "id": "7d74a534-0bad-4e9e-b9a2-e20582ad8616",
+        "description": "2 för 32 kr",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170915-1707753198",
+        "requiredProductQuantity": 2,
+        "presentationMode": "DEFAULT"
+      },
+      "attributes": [
+        {
+          "icon": "flag",
+          "label": "Ursprungsland Sverige"
+        }
+      ],
+      "size": {
+        "value": "1kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "d1ec906e-b28f-4801-8e27-17fc39b8c4ba",
+      "retailerProductId": "1487070",
+      "name": "Mellanmjölk Laktosfri 1,5% 1,5l Valio",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9"
+      ],
+      "alternatives": [],
+      "price": {
+        "original": {
+          "amount": "22.90",
+          "currency": "SEK"
+        },
+        "current": {
+          "amount": "20.00",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.litre",
+          "original": {
+            "amount": "15.27",
+            "currency": "SEK"
+          },
+          "current": {
+            "amount": "13.33",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "Valio",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.jpg",
+        "description": "Mellanmjölk Laktosfri 1,5% 1,5l Valio",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.jpg",
+          "description": "Mellanmjölk Laktosfri 1,5% 1,5l Valio",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/8301a0ca-5905-4a92-a2ac-b3a6f0afcbf9/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "707280f9-a6cc-4904-8f5e-0da0121cbfcb",
+          "retailerPromotionId": "2000572034-1708673585",
+          "description": "20 kr/st",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT"
+        }
+      ],
+      "offer": {
+        "id": "707280f9-a6cc-4904-8f5e-0da0121cbfcb",
+        "description": "20 kr/st",
+        "type": "OFFER",
+        "retailerPromotionId": "2000572034-1708673585",
+        "presentationMode": "DEFAULT"
+      },
+      "size": {
+        "value": "1.5L"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "e7dabc1e-02db-44f5-bc25-5b4fee41d42a",
+      "retailerProductId": "2032478",
+      "name": "Mild Yoghurt Vanilj 2% 1000g Arla Ko®",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee"
+      ],
+      "alternatives": [],
+      "price": {
+        "current": {
+          "amount": "19.90",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "current": {
+            "amount": "19.90",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "Arla Ko",
+      "countryOfOrigin": "Sverige",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.jpg",
+        "description": "Mild Yoghurt Vanilj 2% 1000g Arla Ko®",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.jpg",
+          "description": "Mild Yoghurt Vanilj 2% 1000g Arla Ko®",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/65e2bf3a-36b4-4f59-983c-bcd8088ac6ee/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "7d74a534-0bad-4e9e-b9a2-e20582ad8616",
+          "retailerPromotionId": "5003170915-1707753198",
+          "description": "2 för 32 kr",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT",
+          "requiredProductQuantity": 2
+        }
+      ],
+      "offer": {
+        "id": "7d74a534-0bad-4e9e-b9a2-e20582ad8616",
+        "description": "2 för 32 kr",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170915-1707753198",
+        "requiredProductQuantity": 2,
+        "presentationMode": "DEFAULT"
+      },
+      "attributes": [
+        {
+          "icon": "flag",
+          "label": "Ursprungsland Sverige"
+        }
+      ],
+      "size": {
+        "value": "1kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "d08db0b4-8ef7-434a-826c-d0aaa13e181d",
+      "retailerProductId": "1486321",
+      "name": "Standardmjölkdryck 3,0% Laktosfri 1,5l Arla Ko®",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3"
+      ],
+      "alternatives": [],
+      "price": {
+        "current": {
+          "amount": "21.90",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.litre",
+          "current": {
+            "amount": "14.60",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "Arla Ko",
+      "countryOfOrigin": "Sverige",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.jpg",
+        "description": "Standardmjölkdryck 3,0% Laktosfri 1,5l Arla Ko®",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.jpg",
+          "description": "Standardmjölkdryck 3,0% Laktosfri 1,5l Arla Ko®",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/4b7c96b6-fbc0-4f8f-8f7d-81043c0829f3/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "c71c663e-3e33-41a5-af73-b209675bdb80",
+          "retailerPromotionId": "5003170914-1707753195",
+          "description": "3 för 50 kr -- Max 1 erbj/hushåll",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT",
+          "requiredProductQuantity": 3
+        }
+      ],
+      "offer": {
+        "id": "c71c663e-3e33-41a5-af73-b209675bdb80",
+        "description": "3 för 50 kr -- Max 1 erbj/hushåll",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170914-1707753195",
+        "requiredProductQuantity": 3,
+        "presentationMode": "DEFAULT"
+      },
+      "attributes": [
+        {
+          "icon": "flag",
+          "label": "Ursprungsland Sverige"
+        },
+        {
+          "icon": "laktosfri",
+          "label": "Laktosfritt"
+        }
+      ],
+      "size": {
+        "value": "1.5L"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "5e9114b0-1a64-4b0c-8231-96f7080aa054",
+      "retailerProductId": "1396787",
+      "name": "Spenat i storpack Sköljd 200g ICA",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4"
+      ],
+      "alternatives": [],
+      "price": {
+        "original": {
+          "amount": "19.90",
+          "currency": "SEK"
+        },
+        "current": {
+          "amount": "18.00",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "original": {
+            "amount": "99.50",
+            "currency": "SEK"
+          },
+          "current": {
+            "amount": "90.00",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "ICA",
+      "countryOfOrigin": "EU",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.jpg",
+        "description": "Spenat i storpack Sköljd 200g ICA",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.jpg",
+          "description": "Spenat i storpack Sköljd 200g ICA",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/85ffe9ce-a214-40e5-8923-4b71eb5a8ed4/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "b161abb0-b72e-4c73-940b-552703929a2f",
+          "retailerPromotionId": "5003170944-1707753271",
+          "description": "18 kr/st",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT"
+        }
+      ],
+      "offer": {
+        "id": "b161abb0-b72e-4c73-940b-552703929a2f",
+        "description": "18 kr/st",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170944-1707753271",
+        "presentationMode": "DEFAULT"
+      },
+      "size": {
+        "value": "0.2kg"
+      },
+      "featured": "false"
+    },
+    {
+      "productId": "eb6d4485-83b7-4cee-bbbe-4b01b5d2c4f4",
+      "retailerProductId": "1403672",
+      "name": "Blodapelsin Tarrocco 1kg Klass 1 ICA",
+      "available": true,
+      "maxQuantityReached": false,
+      "imagePaths": [
+        "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd"
+      ],
+      "alternatives": [],
+      "price": {
+        "original": {
+          "amount": "29.90",
+          "currency": "SEK"
+        },
+        "current": {
+          "amount": "25.00",
+          "currency": "SEK"
+        },
+        "unit": {
+          "label": "fop.price.per.kg",
+          "original": {
+            "amount": "29.90",
+            "currency": "SEK"
+          },
+          "current": {
+            "amount": "25.00",
+            "currency": "SEK"
+          }
+        }
+      },
+      "isInCurrentCatalog": true,
+      "isInProductList": false,
+      "brand": "ICA",
+      "countryOfOrigin": "Italien",
+      "retailerFinancingPlanIds": [],
+      "image": {
+        "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.jpg",
+        "description": "Blodapelsin Tarrocco 1kg Klass 1 ICA",
+        "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.jpg 500w",
+        "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1280x1280.jpg 1280w"
+      },
+      "images": [
+        {
+          "src": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.jpg",
+          "description": "Blodapelsin Tarrocco 1kg Klass 1 ICA",
+          "fopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/100x100.webp 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/150x150.webp 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/200x200.webp 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/350x350.webp 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/410x410.webp 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/100x100.jpg 100w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/150x150.jpg 150w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/200x200.jpg 200w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/350x350.jpg 350w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/410x410.jpg 410w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.jpg 500w",
+          "bopSrcset": "https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.webp 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.webp 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/640x640.webp 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/800x800.webp 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/960x960.webp 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1120x1120.webp 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1280x1280.webp 1280w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/300x300.jpg 300w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/500x500.jpg 500w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/640x640.jpg 640w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/800x800.jpg 800w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/960x960.jpg 960w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1120x1120.jpg 1120w, https://handlaprivatkund.ica.se/images-v3/bf7a00ca-390e-4769-865f-dc369586872e/67590c50-b922-434b-a585-d25eb49d19cd/1280x1280.jpg 1280w"
+        }
+      ],
+      "icons": {
+        "certification": [],
+        "legal": []
+      },
+      "offers": [
+        {
+          "id": "1bf7b3c3-d425-49a2-84eb-dd44286aeff7",
+          "retailerPromotionId": "5003170945-1707753273",
+          "description": "25 kr/st",
+          "type": "OFFER",
+          "presentationMode": "DEFAULT"
+        }
+      ],
+      "offer": {
+        "id": "1bf7b3c3-d425-49a2-84eb-dd44286aeff7",
+        "description": "25 kr/st",
+        "type": "OFFER",
+        "retailerPromotionId": "5003170945-1707753273",
+        "presentationMode": "DEFAULT"
+      },
+      "size": {
+        "value": "1kg"
+      },
+      "featured": "false"
+    }
+  ],
+  "missedPromotions": [
+    {
+      "promoId": "7d74a534-0bad-4e9e-b9a2-e20582ad8616",
+      "retailerPromotionId": "5003170915-1707753198",
+      "countBy": "ALL_PRODUCTS",
+      "counters": [
+        {
+          "productIds": [
+            "e7dabc1e-02db-44f5-bc25-5b4fee41d42a",
+            "d49416ce-29ec-4d13-843d-bcf127d1d570"
+          ],
+          "requiredProductQuantity": 2
+        }
+      ]
+    },
+    {
+      "promoId": "770a6b83-98fb-4a0d-a6a3-73c2062da805",
+      "retailerPromotionId": "5003170938-1707753256",
+      "countBy": "ALL_PRODUCTS",
+      "counters": [
+        {
+          "productIds": [
+            "9e04be9c-65dd-4c77-b34b-4c2b03a46ea8"
+          ],
+          "requiredProductQuantity": 5
+        }
+      ]
+    },
+    {
+      "promoId": "4a79f148-731a-477a-b799-3ba382a93db5",
+      "retailerPromotionId": "5003170902-1707753154",
+      "countBy": "ALL_PRODUCTS",
+      "counters": [
+        {
+          "productIds": [
+            "0e2ada18-ae51-4bcb-bed2-b9e92ea6133c"
+          ],
+          "requiredProductQuantity": 3
+        }
+      ]
+    },
+    {
+      "promoId": "c71c663e-3e33-41a5-af73-b209675bdb80",
+      "retailerPromotionId": "5003170914-1707753195",
+      "countBy": "ALL_PRODUCTS",
+      "counters": [
+        {
+          "productIds": [
+            "d08db0b4-8ef7-434a-826c-d0aaa13e181d"
+          ],
+          "requiredProductQuantity": 3
+        }
+      ]
+    }
+  ]
+}
