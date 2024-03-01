@@ -2,14 +2,17 @@ using System.Data.SqlTypes;
 using API.Models;
 using System.Text.Json;
 using System.Text.RegularExpressions;
+using API.Requests;
+using Castle.Components.DictionaryAdapter.Xml;
 using Database.Models;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
 using Newtonsoft.Json.Linq;
 
 namespace API.Properties.Services;
 
 public interface IIcaService
 {
-    
+    Task<bool> GetDiscountedProducts(GetDiscountedItemsIcaRequest req);
 }
 public class IcaService : IIcaService
 {
@@ -20,7 +23,7 @@ public class IcaService : IIcaService
         _httpClient = httpClient;
     }
     
-    public async Task<bool> GetDiscountedProducts()
+    public async Task<bool> GetDiscountedProducts(GetDiscountedItemsIcaRequest req)
     {
         var productList = new List<Product>();
             //Hämtar json strängen
@@ -42,8 +45,13 @@ public class IcaService : IIcaService
                 }
             }
 
-            //Delar upp den i mindre delar då decorateEndpointen har en begränsning på antal produkter man får hämta. 
-            List<List<string>> dividedLists = DivideList(productIds, 10);
+            //Split the list of product Id's since the endpoint allows a few at the time.  
+            List<List<string>> dividedLists = new List<List<string>>();
+            foreach (string[] chunk in productIds.Chunk(10))
+            {
+                dividedLists.Add(chunk.ToList());
+            }
+            
             string decorateProductIds = "";
             for (int i = 0; i < dividedLists.Count; i++)
             {
@@ -62,81 +70,76 @@ public class IcaService : IIcaService
                     decorateProductIds);
                 IcaProducts? icaProducts =
                     JsonSerializer.Deserialize<IcaProducts>(productResponse);
-                productList.AddRange(icaProducts.products);
+                if (icaProducts != null)
+                    if (icaProducts.products != null)
+                        productList.AddRange(icaProducts.products);
             }
-
-            var productRecordList = new List<ProductRecord>();
-
+            
             foreach (var product in productList)
             {
                 productRecords.Add(CreateProductRecord(product));
             }
             
-            Console.WriteLine("ss");
-            //Todo normalisera datat mellan willys och ica och spara i en databas. 
             return true;
     }
-
-        //todo Kolla så den här metoden verkligen fungerar. 
-        static List<List<T>> DivideList<T>(List<T> sourceList, int chunkSize)
-        {
-            var dividedLists = new List<List<T>>();
-
-            // Beräkna antalet delar vi behöver
-            int numberOfChunks = (int)Math.Ceiling((double)sourceList.Count / chunkSize);
-
-            // Loopa genom listan och skapa nya delade listor
-            for (int i = 0; i < numberOfChunks; i++)
-            {
-                dividedLists.Add(sourceList.Skip(i * chunkSize).Take(chunkSize).ToList());
-            }
-            return dividedLists;
-        }
     
-
     private ProductRecord CreateProductRecord(Product product)
     {
-        //Om priset är per kilo så blir priserna konstiga. Sätter vi en bool
-        //kanske vi kan reda ut det bättre. 
+        int offerType;
         
-        // Kanske man ska skapa en enum som håller de olika erbjudande typerna som finns. 
-        //Det finns per styck, 3 för 30 kr, lösvikt i kg. Detta använder frontend för att presentera
-        //Datan tydligare. 
-        bool isKgPrice = product.offer.description.Contains("kr/kg");
+        if (product.offer.requiredProductQuantity!=null)
+        {
+            offerType = (int)(OfferType.MultiBuyOffer);
+        }
+
+       else if (product.offer.description.Contains("st"))
+        {
+            offerType = (int)(OfferType.PerProduct);
+        }
+
+       else
+       {
+           offerType = (int)(OfferType.PerKiloGram);
+       }
+       
         
         string name = product.name;
         string brand = product.brand;
-        string description = product.name; // Kanske får trixa lite med denna
-        decimal price = 0;
-        if (product.price.original==null)
+
+        decimal price;
+        if (decimal.TryParse(product.price.original?.amount, out price)== false)
         {
             price = 0;
         }
-        else
-        {
-            price = Convert.ToDecimal(product.price.original.amount);
-        }
         
-        int minItems = 0;
+        var minItems = 0;
         decimal discountedPrice = 0;
+        //Finding the discounted price based on the offertype. 
+        switch (offerType)
+        {   //Per product
+            case 1:
+                discountedPrice = Convert.ToDecimal(product.price.current.amount);
+                break;
+            //Per kg
+            case 2:
+                string perkgPattern = @"(\d+)\s*kr";
+                Match perKgMatch = Regex.Match(product.offer.description,perkgPattern);
+                if (perKgMatch.Success)
+                {
+                    discountedPrice = decimal.Parse(perKgMatch.Groups[1].Value);
+                }
+                break;
+            //MultiOffer
+            case 3:
+                string multiOfferPattern = @"för\s+(\d+)\s+kr";
+                Match multiOfferMatch = Regex.Match(product.offer.description,multiOfferPattern);
+                if (multiOfferMatch.Success)
+                {
+                    discountedPrice = decimal.Parse(multiOfferMatch.Groups[1].Value);
+                }
+                break;
+        }
         
-        if (product.price.current == null)
-        {
-            //Gör nåt med regex. T.ex 2 för 30.
-            Regex regex = new Regex(@"(\d+)\s*för\s*(\d+)");
-            Match match2 = regex.Match(product.offer.description);
-            if (match2.Success)
-            {
-                minItems = Convert.ToInt32(match2.Groups[1]);
-                discountedPrice = Convert.ToDecimal(match2.Groups[2].Value)/minItems;
-            }
-        }
-        else
-        {
-            discountedPrice = Convert.ToDecimal(product.price.current.amount);
-        }
-
-      
         decimal quantity = 0;
         string quantityUnit = "";
         string pattern = @"(\d+([.,]\d+)?)(.*)";
@@ -146,8 +149,6 @@ public class IcaService : IIcaService
             quantity = decimal.Parse(match.Groups[1].Value.Replace(',', '.'));
             quantityUnit = match.Groups[3].Value.Trim();
         }
-
-        
         
         //Ibland kan vara en min items kampanj men variabeln är inte satt. 
         if (product.offer.requiredProductQuantity!= null)
@@ -168,9 +169,8 @@ public class IcaService : IIcaService
             }
         }
         
-        DateTime date = DateTime.Now; // Replace with your date
-
-        // Calculate start (Monday) of the week
+        DateTime date = DateTime.Now; 
+        
         int diffToMonday = date.DayOfWeek - DayOfWeek.Monday;
         if (diffToMonday < 0)
         {
@@ -179,15 +179,15 @@ public class IcaService : IIcaService
         
         DateTime startDate = date.AddDays(-1 * diffToMonday);
 
-        // Calculate end (Sunday) of the week
+       
         DateTime endDate = startDate.AddDays(6);
-
         
         var productRecord = new ProductRecord()
         {
             Name = name,
+            OfferType = offerType,
             Brand = brand,
-            Description = description,
+            Description = "",
             Price = price,
             DiscountedPrice = discountedPrice,
             Quantity = quantity,

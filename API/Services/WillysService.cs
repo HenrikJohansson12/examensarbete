@@ -49,35 +49,36 @@ public class WillysService : IWillysService
         {
             _productRecords.Add(CreateProductRecord(product));
         }
-        
+     Console.WriteLine();   
         return true;
     }
 
     private ProductRecord CreateProductRecord(Result result)
     {
-        int offerType;
-        //First we need to determine what kind of offer it is. 
-        if (result.potentialPromotions.FirstOrDefault().realMixAndMatch)
+        try
         {
-            offerType = (int)(OfferType.MultiBuyOffer);
-        }
-      else if (result.priceUnit == "kr/kg")
-        {
-            offerType = (int)(OfferType.PerKiloGram);
-        }
-        
-        else if (result.priceUnit == "kr/st")
-        {
-            offerType = (int)(OfferType.PerProduct);
-        }
-        
-        else offerType = (int)(OfferType.None);
-        
-        
+            int offerType;
+            //First we need to determine what kind of offer it is. 
+            if (result.potentialPromotions.FirstOrDefault().realMixAndMatch)
+            {
+                offerType = (int)(OfferType.MultiBuyOffer);
+            }
+            
+            else if (result.priceUnit == "kr/kg")
+            {
+                offerType = (int)(OfferType.PerKiloGram);
+            }
+
+            else if (result.priceUnit == "kr/st")
+            {
+                offerType = (int)(OfferType.PerProduct);
+            }
+
+            else offerType = (int)(OfferType.None);
+            
             int quantity = 0;
             string unit = "";
-            var pattern = @"\d+";
-            Match quantityMatch = Regex.Match(result.displayVolume, pattern);
+            Match quantityMatch = Regex.Match(result.displayVolume, @"\d+");
             if (quantityMatch.Success)
             {
                 quantity = int.Parse(quantityMatch.Value);
@@ -87,20 +88,26 @@ public class WillysService : IWillysService
             if (match.Success)
             {
                 unit = match.Groups[2].Value;
-
             }
-
+            
             int minItems = 0;
             if (result.potentialPromotions.FirstOrDefault().realMixAndMatch)
             {
                 minItems = result.potentialPromotions.FirstOrDefault().qualifyingCount.Value;
             }
-            
+
+            int maxItems = 0;
+
+            var redeemLimit = result.potentialPromotions.FirstOrDefault().redeemLimit;
+            if (redeemLimit != null)
+                maxItems = Convert.ToInt32(redeemLimit.Value);
+
             bool isMemberOffer = false;
             if (result.potentialPromotions.FirstOrDefault().campaignType == "LOYALTY")
             {
                 isMemberOffer = true;
             }
+
             //Parse the dates. 
             string format = "dd/MM-yyyy";
             CultureInfo provider = CultureInfo.InvariantCulture;
@@ -110,8 +117,29 @@ public class WillysService : IWillysService
             DateOnly endDate;
             DateOnly.TryParseExact(result.potentialPromotions.FirstOrDefault().endDate, format, provider,
                 DateTimeStyles.None, out endDate);
-            var price = Convert.ToDecimal(result.price);
-            var discountedPrice = Convert.ToDecimal(result.potentialPromotions.FirstOrDefault().price);
+            decimal price;
+            price = Convert.ToDecimal(result.price, new CultureInfo("en-US"));
+                 
+            var discountedPrice = 0m;
+
+            if (result.potentialPromotions.FirstOrDefault().price == null)
+            {
+                Match priceMatch = Regex.Match(result.potentialPromotions.FirstOrDefault().rewardLabel,@"(\d+,\d+)" );
+                if (priceMatch.Success)
+                {    
+                    string numberString = priceMatch.Groups[1].Value; 
+                    numberString = numberString.Replace(",", ".");
+                    discountedPrice = Convert.ToDecimal(numberString, new CultureInfo("en-US"));
+                   
+                }
+
+            }
+            else discountedPrice = Convert.ToDecimal( result.potentialPromotions.FirstOrDefault().price.Value);
+            
+            if (offerType == 3) //MultiBuyOffer
+            {
+                discountedPrice /= minItems;
+            }
             
             var productRecord = new ProductRecord()
             {
@@ -123,13 +151,19 @@ public class WillysService : IWillysService
                 Price = price,
                 DiscountedPrice = discountedPrice,
                 MinItems = minItems,
-                MaxItems = Convert.ToInt32(result.potentialPromotions[0].redeemLimit),
+                MaxItems = maxItems,
                 IsMemberOffer = isMemberOffer,
                 StartDate = startDate,
                 EndDate = endDate,
             };
             return productRecord;
         }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
+}
 
 

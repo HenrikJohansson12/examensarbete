@@ -1,7 +1,7 @@
 using System.Net;
 using API.Properties.Services;
 using API.Requests;
-using Moq;
+using Database.Models;
 namespace BackEndTests;
 using System.IO;
 public class WillysServiceTest
@@ -33,9 +33,10 @@ public class WillysServiceTest
         }
     }
     [Fact] 
-    public  void WillysJsonIsConvertedCorrectly()
+    public async void WillysJsonIsConvertedCorrectly()
     {
         string jsonContent = File.ReadAllText("willysresponse.json");
+        
         var req = new GetDiscountedItemsWillysRequest
         {
             StoreId = 1
@@ -46,11 +47,63 @@ public class WillysServiceTest
             Content = new StringContent(jsonContent)
         }));
         var service = new WillysService(http);
-      service.GetDiscountedProducts(req);
+    await service.GetDiscountedProducts(req);
 
       var result = service.GetProductRecords();
+
+      var perKiloGramOffer = new ProductRecord()
+      {
+          OfferType = 2,
+          Name = "Färsk fläskfilé",
+          Brand = "Danish Crown",
+          Price = 129.0m,
+          DiscountedPrice = 69.9m,
+          Quantity = 500,
+          QuantityUnit = "g",
+          MinItems = 0,
+          MaxItems = 3,
+          IsMemberOffer = true,
+          StartDate = new DateOnly(2024, 2, 19),
+          EndDate = new DateOnly(2024, 2, 25),
+
+      };
+      var multiOffer = new ProductRecord()
+      {
+          OfferType = 3,
+          Name = "Flytande tvättmedel, sköljmedel",
+          Brand = "Grumme",
+          Price = 36.9m,
+          DiscountedPrice = 25m,
+          Quantity = 750,
+          QuantityUnit = "ml",
+          MinItems = 2,
+          MaxItems = 2,
+          IsMemberOffer = true,
+          StartDate = new DateOnly(2024, 2, 19),
+          EndDate = new DateOnly(2024, 2, 25),
+
+      };
       
-      Assert.NotNull(result);
+      var perProductOffer = new ProductRecord()
+      {
+          OfferType = 1,
+          Name = "Grönkål",
+          Brand = "Spanien",
+          Price = 29.9m,
+          DiscountedPrice = 19.9m,
+          Quantity = 200,
+          QuantityUnit = "g",
+          MinItems = 0,
+          MaxItems = 0,
+          IsMemberOffer = false,
+          StartDate = new DateOnly(2024, 2, 19),
+          EndDate = new DateOnly(2024, 2, 25),
+
+      };
+      
+      Assert.Equivalent(perKiloGramOffer,result[0]);
+      Assert.Equivalent(multiOffer,result[2]);
+      Assert.Equivalent(perProductOffer,result[27]);
     }
     
     [Fact]

@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder();
 builder.Services.AddFastEndpoints();
 builder.Services.SwaggerDocument(); //add this
 builder.Services.AddScoped<IWillysService,WillysService>();
+builder.Services.AddScoped<IIcaService,IcaService>();
 builder.Services.AddSingleton<HttpClient>();
 
 var app = builder.Build();

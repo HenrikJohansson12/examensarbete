@@ -7,6 +7,7 @@ namespace Database;
 public class WebApiDbContext : DbContext
 {
     public DbSet<ProductRecord> ProductRecords { get; set; }
+    
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
