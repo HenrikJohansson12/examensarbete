@@ -2,6 +2,7 @@
 
 public class Ingredient
 {
+        public int Id { get; set; }
         public int IngredientId { get; set; }
         public string Type { get; set; }
         public int Number { get; set; }

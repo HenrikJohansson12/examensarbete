@@ -8,6 +8,8 @@ using Database.Models.Livsmedelsverket;
 public class IngredientsTest
 {
     [Fact]
+    
+    //Testing that we can call the api and convert the response into a ingredient. 
     public async void Can_CreateIngredient_rows_FromLivsmedelsverket_Api()
     {
         var httpClient = new HttpClient();
@@ -25,7 +27,16 @@ public class IngredientsTest
 
         foreach (var livsmedel in root.livsmedel)
         {
-            //Lägg till här konverteringen. 
+            listOfIngredients.Add(new Ingredient()
+            {
+                IngredientId = livsmedel.nummer,
+                Name = livsmedel.namn,
+                Version = livsmedel.version,
+                Type = livsmedel.livsmedelsTyp,
+                Number = livsmedel.livsmedelsTypId
+            });
         }
+        
+       Assert.Equal(10,listOfIngredients.Count);
     }
 }
