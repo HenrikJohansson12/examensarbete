@@ -1,11 +1,15 @@
-﻿using System.Net;
+﻿using System.Globalization;
+using System.Net;
 using Moq;
 using System.IO;
+using System.Text;
+using System.Text.Unicode;
 using API.Properties.Services;
 using API.Requests;
+using CsvHelper;
 using Database.Models;
 
-namespace BackEndTests;
+namespace BackEndTests.IcaTest;
 
 public class IcaServiceUnitTest
 {
@@ -95,6 +99,7 @@ public class IcaServiceUnitTest
             MinItems = 0,
             MaxItems = 0,
             IsMemberOffer = false,
+            CountryOfOrigin = (int)(CountryOfOrigin.Sweden),
             //Not good for testing. 
             StartDate = new DateOnly(2024, 3, 11),
             EndDate = new DateOnly(2024, 3, 17),
@@ -113,6 +118,7 @@ public class IcaServiceUnitTest
             MinItems = 3,
             MaxItems = 1,
             IsMemberOffer = false,
+            CountryOfOrigin = (int)(CountryOfOrigin.Sweden),
             StartDate = new DateOnly(2024, 3, 11),
             EndDate = new DateOnly(2024, 3, 17),
 
@@ -130,6 +136,7 @@ public class IcaServiceUnitTest
             MinItems = 0,
             MaxItems = 0,
             IsMemberOffer = false,
+            CountryOfOrigin = (int)(CountryOfOrigin.Spain),
             StartDate = new DateOnly(2024, 3, 11),
             EndDate = new DateOnly(2024, 3, 17),
 
@@ -147,6 +154,7 @@ public class IcaServiceUnitTest
             MinItems = 2,
             MaxItems = 0,
             IsMemberOffer = true,
+            CountryOfOrigin = (int)(CountryOfOrigin.Sweden),
             StartDate = new DateOnly(2024, 3, 11),
             EndDate = new DateOnly(2024, 3, 17),
 
@@ -159,28 +167,31 @@ public class IcaServiceUnitTest
         
         
     }
-  
+
+    [Fact]
+    public async void Convert_Ica_Data_To_Csv()
+    {
+        var httpClient = new HttpClient();
+        var icaservice = new IcaService(httpClient);
+        var req = new GetDiscountedItemsIcaRequest{StoreId = 123};
+
+       await icaservice.GetDiscountedProducts(req);
+
+       var result = icaservice.GetRecords();
+    
+       using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\icatest.csv", false,
+                  Encoding.UTF32))
+           
+       using (var csv = new CsvWriter(writer, new CultureInfo("se-SE")))
+       {
+           csv.WriteRecords(result);
+       }
+
+    }
+    
 }
 
-public class ServiceTest
-{
-    private readonly HttpClient _http;
 
-    public ServiceTest(HttpClient http)
-    {
-        _http = http;
-    }
-    public async Task<string> CreateAsync()
-    {
-        var response = await _http.GetAsync("https://google.com");
-        if (response.StatusCode == HttpStatusCode.BadRequest)
-        {
-            return null;
-        }
-
-        return await response.Content.ReadAsStringAsync();
-    }
-}
     
     
    

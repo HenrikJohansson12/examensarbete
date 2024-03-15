@@ -141,6 +141,21 @@ public class WillysService : IWillysService
                 discountedPrice /= minItems;
             }
             
+            var countryOfOrigin = 0;
+            if (result?.labels == null)
+            {
+                countryOfOrigin = (int)(CountryOfOrigin.Unknown);
+            }
+            else
+            {
+              var swedishOrigin =  result?.labels?.Any(x => x.Contains("swedish_flag") || x.Contains("meat_from_sweden"));
+              if (swedishOrigin == true)
+              {
+                  countryOfOrigin = (int)(CountryOfOrigin.Sweden);
+              }
+            }
+            
+            
             var productRecord = new ProductRecord()
             {
                 OfferType = offerType,
@@ -152,6 +167,7 @@ public class WillysService : IWillysService
                 DiscountedPrice = discountedPrice,
                 MinItems = minItems,
                 MaxItems = maxItems,
+                CountryOfOrigin = countryOfOrigin,
                 IsMemberOffer = isMemberOffer,
                 StartDate = startDate,
                 EndDate = endDate,

@@ -6,6 +6,7 @@ namespace Database.Models;
 public class ProductRecord
 {
     public int Id { get; set; }
+    public int CountryOfOrigin { get; set; }
     public int OfferType { get; set; }
     public string Name { get; set; }
     public string Brand { get; set; }

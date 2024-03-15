@@ -1,6 +1,9 @@
+using System.Globalization;
 using System.Net;
+using System.Text;
 using API.Properties.Services;
 using API.Requests;
+using CsvHelper;
 using Database.Models;
 namespace BackEndTests;
 using System.IO;
@@ -65,6 +68,7 @@ public class WillysServiceTest
           IsMemberOffer = true,
           StartDate = new DateOnly(2024, 2, 19),
           EndDate = new DateOnly(2024, 2, 25),
+          CountryOfOrigin = 0
 
       };
       var multiOffer = new ProductRecord()
@@ -81,6 +85,7 @@ public class WillysServiceTest
           IsMemberOffer = true,
           StartDate = new DateOnly(2024, 2, 19),
           EndDate = new DateOnly(2024, 2, 25),
+          CountryOfOrigin = 0
 
       };
       
@@ -98,6 +103,7 @@ public class WillysServiceTest
           IsMemberOffer = false,
           StartDate = new DateOnly(2024, 2, 19),
           EndDate = new DateOnly(2024, 2, 25),
+          CountryOfOrigin = 0
 
       };
       
@@ -132,7 +138,31 @@ public class WillysServiceTest
 
   }
   
+
+
+[Fact]
+public async void Convert_Willys_Data_To_Csv()
+{
+    var httpClient = new HttpClient();
+    var WillysService = new WillysService(httpClient);
+    var req = new GetDiscountedItemsWillysRequest(){StoreId = 123};
+
+    await WillysService.GetDiscountedProducts(req);
+
+    var result = WillysService.GetProductRecords();
+ 
+    using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\willystest.csv", false,
+               Encoding.UTF32))
+           
+    using (var csv = new CsvWriter(writer, new CultureInfo("se-SE")))
+    {
+        csv.WriteRecords(result);
+    }
+
 }
+}
+
+
 
 public class Service
 {
