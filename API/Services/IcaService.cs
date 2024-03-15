@@ -1,4 +1,5 @@
 using System.Data.SqlTypes;
+using System.Globalization;
 using API.Models;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -22,7 +23,10 @@ public class IcaService : IIcaService
     {
         _httpClient = httpClient;
     }
-    
+    public List<ProductRecord> GetRecords()
+    {
+        return productRecords;
+    }
     public async Task<bool> GetDiscountedProducts(GetDiscountedItemsIcaRequest req)
     {
         var productList = new List<Product>();
@@ -62,7 +66,11 @@ public class IcaService : IIcaService
                         decorateProductIds = dividedLists[i][j] + ",";
                     }
 
-                    decorateProductIds = decorateProductIds + dividedLists[i][j] + ",";
+                    else 
+                    {
+                        decorateProductIds = decorateProductIds + dividedLists[i][j] + ",";
+                    }
+                   
                 }
 
                 string productResponse = await _httpClient.GetStringAsync(
@@ -92,6 +100,11 @@ public class IcaService : IIcaService
             offerType = (int)(OfferType.MultiBuyOffer);
         }
 
+        if ((product.offer.description.Contains("för")))
+        {
+            offerType = (int)(OfferType.MultiBuyOffer);
+        }
+
        else if (product.offer.description.Contains("st"))
         {
             offerType = (int)(OfferType.PerProduct);
@@ -107,38 +120,12 @@ public class IcaService : IIcaService
         string brand = product.brand;
 
         decimal price;
-        if (decimal.TryParse(product.price.original?.amount, out price)== false)
-        {
-            price = 0;
-        }
+        price = Convert.ToDecimal(product.price.original?.amount, new CultureInfo("en-US"));
+       
         
         var minItems = 0;
         decimal discountedPrice = 0;
-        //Finding the discounted price based on the offertype. 
-        switch (offerType)
-        {   //Per product
-            case 1:
-                discountedPrice = Convert.ToDecimal(product.price.current.amount);
-                break;
-            //Per kg
-            case 2:
-                string perkgPattern = @"(\d+)\s*kr";
-                Match perKgMatch = Regex.Match(product.offer.description,perkgPattern);
-                if (perKgMatch.Success)
-                {
-                    discountedPrice = decimal.Parse(perKgMatch.Groups[1].Value);
-                }
-                break;
-            //MultiOffer
-            case 3:
-                string multiOfferPattern = @"för\s+(\d+)\s+kr";
-                Match multiOfferMatch = Regex.Match(product.offer.description,multiOfferPattern);
-                if (multiOfferMatch.Success)
-                {
-                    discountedPrice = decimal.Parse(multiOfferMatch.Groups[1].Value);
-                }
-                break;
-        }
+     
         
         decimal quantity = 0;
         string quantityUnit = "";
@@ -146,15 +133,29 @@ public class IcaService : IIcaService
         Match match = Regex.Match(product.size.value, pattern);
         if (match.Success)
         {
-            quantity = decimal.Parse(match.Groups[1].Value.Replace(',', '.'));
-            quantityUnit = match.Groups[3].Value.Trim();
+            quantity = Convert.ToDecimal(match.Groups[1].Value.Replace(',', '.'),new CultureInfo("en-US"));
+            if (match.Groups[3].Value.Trim() == "")
+            {
+                quantityUnit =  product.size.uom.ToLower();
+            }
+
+            if (quantityUnit=="")
+            {
+               quantityUnit = match.Groups[3].Value.ToLower();
+            }
         }
         
         //Ibland kan vara en min items kampanj men variabeln är inte satt. 
         if (product.offer.requiredProductQuantity!= null)
         {
-            minItems = product.offer.requiredProductQuantity.Value;
+            minItems = Convert.ToInt32(product.offer.requiredProductQuantity.Value);
         }
+        if (minItems == 0 && offerType == Convert.ToInt32(OfferType.MultiBuyOffer))
+        {
+            Match minItemsMatch = Regex.Match(product.offer.description, @"^(\d+)");
+            minItems = Convert.ToInt32(minItemsMatch.Groups[1].Value);
+        }
+     
 
         bool isMemberOffer = product.offer.description.Contains("Stammis");
         int maxItems = 0;
@@ -167,6 +168,36 @@ public class IcaService : IIcaService
             {
                 maxItems = Convert.ToInt32(maxMatch.Groups[1].Value);
             }
+        }
+        
+        //Finding the discounted price based on the offertype. 
+        switch (offerType)
+        {   //Per product
+            case 1:
+                discountedPrice = Convert.ToDecimal(product.price.current.amount,new CultureInfo("en-US"));
+                break;
+            //Per kg
+            case 2:
+                string perkgPattern = @"(\d+)\s*kr";
+                Match perKgMatch = Regex.Match(product.offer.description,perkgPattern);
+                if (perKgMatch.Success)
+                {
+                    discountedPrice = decimal.Parse(perKgMatch.Groups[1].Value);
+                    price = decimal.Round((1000 / quantity) * price);
+                    
+                }
+                break;
+            //MultiOffer
+            case 3:
+                string multiOfferPattern = @"för\s+(\d+)\s+kr";
+                Match multiOfferMatch = Regex.Match(product.offer.description,multiOfferPattern);
+                if (multiOfferMatch.Success)
+                {
+                    discountedPrice = Convert.ToDecimal(multiOfferMatch.Groups[1].Value,new CultureInfo("en-US"));
+                    discountedPrice = decimal.Round(discountedPrice/minItems,2);
+                }
+                price = Convert.ToDecimal(product.price.current?.amount, new CultureInfo("en-US"));
+                break;
         }
         
         DateTime date = DateTime.Now; 
@@ -187,7 +218,6 @@ public class IcaService : IIcaService
             Name = name,
             OfferType = offerType,
             Brand = brand,
-            Description = "",
             Price = price,
             DiscountedPrice = discountedPrice,
             Quantity = quantity,
