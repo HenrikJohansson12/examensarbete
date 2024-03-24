@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Root from "./routes/root.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LandingPage from "./routes/components/LandingPage.tsx";
-import SignupPage from "./routes/components/SignupPage.tsx";
+import LandingPage from "./routes/pages/LandingPage.tsx";
+import SignupPage from "./routes/pages/SignupPage.tsx";
+import LogInPage from "./routes/pages/LogInPage.tsx";
+
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignupPage />
+      },
+      {
+        path: "/login",
+        element: <LogInPage />
       },
     ],
   },
