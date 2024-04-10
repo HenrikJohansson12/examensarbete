@@ -1,7 +1,4 @@
-﻿
-using System.Globalization;
-using CsvHelper;
-using Database.Models;
+﻿using Database.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Database;
@@ -12,6 +9,7 @@ public class WebApiDbContext : DbContext
     public DbSet<Store> Stores { get; set; }
     public DbSet<Brand> Brands { get; set; }
 
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseInMemoryDatabase("WebApiDatabase");
@@ -19,34 +17,35 @@ public class WebApiDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        using (var reader = new StreamReader("C:\\dev\\examensarbete\\exports\\icatestweek11.csv"))
-        using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        var brand1 = new Brand { Id = 1, Name = "Ica" };
+        var brand2 = new Brand { Id = 2, Name = "Willys" };
+
+        var store1 = new Store
         {
-            var productRecords = csv.GetRecords<ProductRecord>();
-            modelBuilder.Entity<ProductRecord>().HasData(productRecords);
-        }
+            Id = 1,
+            Name = "Willys Knalleland",
+            InternalStoreId = "2110",
+            StreetAddress = "Knallelandsvägen 3",
+            ZipCode = "50637",
+            City = "Borås",
+            BrandId = brand2.Id
+        };
 
-        modelBuilder.Entity<Brand>().HasData(
-            new Brand() { Id = 1, Name = "Ica" },
-            new Brand { Id = 2, Name = "Willys" }
-            // Add more products here
-        );
-        modelBuilder.Entity<Store>().HasData(
-            new Store
-            {
-                Name = "Willys Knalleland",
-                InternalStoreId = "2103",
-                Brand = new Brand{Id = 2,Name = "Willys"}
-                
-            },
-        new Store
-            {
-                Name = "Ica City Knalleland",
-                InternalStoreId = "1004101",
-                Brand = new Brand{Id = 1,Name = "Ica"}
-            }
-        );
+        var store2 = new Store
+        {
+            Id = 2,
+            Name = "Ica City Knalleland",
+            InternalStoreId = "1004101",
+            StreetAddress = "Knallelandsvägen 12",
+            ZipCode = "50637",
+            City = "Borås",
+            BrandId = brand1.Id
+        };
+
+        modelBuilder.Entity<Brand>().HasData(new List<Brand> { brand1, brand2 });
+        modelBuilder.Entity<Store>().HasData(new List<Store> { store1, store2 });
+
+        base.OnModelCreating(modelBuilder);
+        
     }
-    
 }
-

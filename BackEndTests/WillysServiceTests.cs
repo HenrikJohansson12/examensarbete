@@ -4,7 +4,11 @@ using System.Text;
 using API.Properties.Services;
 using API.Requests;
 using CsvHelper;
+using Database;
 using Database.Models;
+using Microsoft.EntityFrameworkCore;
+using Moq;
+
 namespace BackEndTests;
 using System.IO;
 public class WillysServiceTest
@@ -42,14 +46,15 @@ public class WillysServiceTest
         
         var req = new GetDiscountedItemsWillysRequest
         {
-            StoreId = 1
+            StoreId = "123"
         };
         var http = new HttpClient( new HttpMessageHandlerMock(new HttpResponseMessage()
         {
             StatusCode = HttpStatusCode.OK,
             Content = new StringContent(jsonContent)
         }));
-        var service = new WillysService(http);
+        
+        var service = new WillysService(http, new WebApiDbContext());
     await service.GetDiscountedProducts(req);
 
       var result = service.GetProductRecords();
@@ -144,8 +149,9 @@ public class WillysServiceTest
 public async void Convert_Willys_Data_To_Csv()
 {
     var httpClient = new HttpClient();
-    var willysService = new WillysService(httpClient);
-    var req = new GetDiscountedItemsWillysRequest(){StoreId = 123};
+    var dbContext = new WebApiDbContext();
+    var willysService = new WillysService(httpClient,dbContext);
+    var req = new GetDiscountedItemsWillysRequest(){StoreId = "123"};
 
     await willysService.GetDiscountedProducts(req);
 

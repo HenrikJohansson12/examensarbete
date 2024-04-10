@@ -2,5 +2,5 @@ namespace API.Requests;
 
 public class GetDiscountedItemsWillysRequest
 {
-    public int StoreId { get; set; }
+    public string StoreId { get; set; }
 }

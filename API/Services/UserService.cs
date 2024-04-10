@@ -1,7 +1,7 @@
 ﻿using API.Requests;
 using Database.Models;
 
-namespace API.Properties.Services;
+namespace API.Services;
 
 public interface IUserService
 {

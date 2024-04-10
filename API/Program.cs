@@ -1,5 +1,6 @@
 global using FastEndpoints;
 using API.Properties.Services;
+using API.Services;
 using Database;
 using FastEndpoints.Swagger; //add this
 
@@ -8,6 +9,7 @@ builder.Services.AddFastEndpoints();
 builder.Services.SwaggerDocument(); //add this
 builder.Services.AddScoped<IWillysService,WillysService>();
 builder.Services.AddScoped<IIcaService,IcaService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddScoped<WebApiDbContext>();
 

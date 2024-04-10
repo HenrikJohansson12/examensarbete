@@ -3,6 +3,7 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using API.Models;
 using API.Requests;
+using Database;
 using Database.Models;
 
 namespace API.Properties.Services;
@@ -14,10 +15,12 @@ public interface IWillysService
 public class WillysService : IWillysService
 {
     private readonly HttpClient _httpClient;
-    private List<ProductRecord> _productRecords = new List<ProductRecord>();
-    public WillysService(HttpClient httpClient)
+    private List<ProductRecord> _productRecords = new ();
+    private WebApiDbContext _webApiDbContext;
+    public WillysService(HttpClient httpClient, WebApiDbContext webApiDbContext)
     {
         _httpClient = httpClient;
+        _webApiDbContext = webApiDbContext;
     }
     public List<ProductRecord> GetProductRecords()
     {
@@ -25,11 +28,17 @@ public class WillysService : IWillysService
     }
     public async Task<bool> GetDiscountedProducts(GetDiscountedItemsWillysRequest req)
     {
+        var store = _webApiDbContext.Stores.FirstOrDefault(x => x.InternalStoreId == req.StoreId);
+        
         var productList = new List<Result>();
 
+
+        var httpString = new Uri(
+            $"https://www.willys.se/search/campaigns/offline?page=0&q={req.StoreId}&size=250&type=PERSONAL_GENERAL&avoidCache=1708079169569",
+            UriKind.Absolute);
         var result =
-            await _httpClient.GetAsync(
-                "https://www.willys.se/search/campaigns/offline?page=0&q=2103&size=250&type=PERSONAL_GENERAL&avoidCache=1708079169569");
+            await _httpClient.GetAsync(httpString
+                );
         if (!result.IsSuccessStatusCode)
         {
             return false;
@@ -47,9 +56,14 @@ public class WillysService : IWillysService
             
         foreach (var product in productList)
         {
-            _productRecords.Add(CreateProductRecord(product));
+           var productRecord = CreateProductRecord(product);
+           productRecord.Store = store;
+           _productRecords.Add(productRecord);
+           _webApiDbContext.ProductRecords.Add(productRecord);
+           
         }
-     Console.WriteLine();   
+     Console.WriteLine();
+    await _webApiDbContext.SaveChangesAsync();
         return true;
     }
 
