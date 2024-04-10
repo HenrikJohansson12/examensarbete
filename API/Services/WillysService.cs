@@ -78,16 +78,19 @@ public class WillysService : IWillysService
             
             int quantity = 0;
             string unit = "";
-            Match quantityMatch = Regex.Match(result.displayVolume, @"\d+");
-            if (quantityMatch.Success)
+            if (result.displayVolume!= null)
             {
-                quantity = int.Parse(quantityMatch.Value);
-            }
+                Match quantityMatch = Regex.Match(result.displayVolume, @"\d+");
+                if (quantityMatch.Success)
+                {
+                    quantity = int.Parse(quantityMatch.Value);
+                }
 
-            Match match = Regex.Match(result.displayVolume, @"(\d+)(\D+)");
-            if (match.Success)
-            {
-                unit = match.Groups[2].Value;
+                Match match = Regex.Match(result.displayVolume, @"(\d+)(\D+)");
+                if (match.Success)
+                {
+                    unit = match.Groups[2].Value;
+                }
             }
             
             int minItems = 0;

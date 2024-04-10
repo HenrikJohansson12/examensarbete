@@ -18,8 +18,12 @@ export default function LandingPage() {
         navigate('/login');
     }
   return (
+  
    <Box height={'100%'}>
         <Typography textAlign={'center'} gutterBottom variant='h2'  > Exjobb</Typography>
+      <div>
+        <h1 className='text-red-600'> hello test</h1>
+      </div>
     <Card>
     <CardContent>
       <Typography gutterBottom variant="h5" component="div">

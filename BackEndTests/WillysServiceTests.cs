@@ -144,12 +144,12 @@ public class WillysServiceTest
 public async void Convert_Willys_Data_To_Csv()
 {
     var httpClient = new HttpClient();
-    var WillysService = new WillysService(httpClient);
+    var willysService = new WillysService(httpClient);
     var req = new GetDiscountedItemsWillysRequest(){StoreId = 123};
 
-    await WillysService.GetDiscountedProducts(req);
+    await willysService.GetDiscountedProducts(req);
 
-    var result = WillysService.GetProductRecords();
+    var result = willysService.GetProductRecords();
  
     using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\willystest.csv", false,
                Encoding.UTF32))
