@@ -2,5 +2,5 @@
 
 public class GetDiscountedItemsIcaRequest
 {
-    public int StoreId { get; set; }
+    public string StoreId { get; set; }
 }
