@@ -103,7 +103,10 @@ public class IcaService : IIcaService
 
         foreach (var product in productList)
         {
-            productRecords.Add(IcaToProductRecordMapper.Map(product));
+            var productRecord = IcaToProductRecordMapper.Map(product);
+            productRecords.Add(productRecord);
+            _dbContext.ProductRecords.Add(productRecord);
+            await _dbContext.SaveChangesAsync();
         }
 
         return true;

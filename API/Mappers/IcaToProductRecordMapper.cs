@@ -46,18 +46,21 @@ public class IcaToProductRecordMapper
         decimal quantity = 0;
         string quantityUnit = "";
         string pattern = @"(\d+([.,]\d+)?)(.*)";
-        Match match = Regex.Match(product.size.value, pattern);
-        if (match.Success)
+        if (product.size?.value != null)
         {
-            quantity = Convert.ToDecimal(match.Groups[1].Value.Replace(',', '.'), new CultureInfo("en-US"));
-            if (match.Groups[3].Value.Trim() == "")
+            var  match = Regex.Match(product.size.value, pattern);
+            if (match.Success)
             {
-                quantityUnit = product.size.uom.ToLower();
-            }
+                quantity = Convert.ToDecimal(match.Groups[1].Value.Replace(',', '.'), new CultureInfo("en-US"));
+                if (match.Groups[3].Value.Trim() == "")
+                {
+                    quantityUnit = product.size.uom.ToLower();
+                }
 
-            if (quantityUnit == "")
-            {
-                quantityUnit = match.Groups[3].Value.ToLower();
+                if (quantityUnit == "")
+                {
+                    quantityUnit = match.Groups[3].Value.ToLower();
+                }
             }
         }
 
