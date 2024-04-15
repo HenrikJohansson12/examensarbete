@@ -151,13 +151,13 @@ public async void Convert_Willys_Data_To_Csv()
     var httpClient = new HttpClient();
     var dbContext = new WebApiDbContext();
     var willysService = new WillysService(httpClient,dbContext);
-    var req = new GetDiscountedItemsWillysRequest(){StoreId = "123"};
+    var req = new GetDiscountedItemsWillysRequest(){StoreId = "2110"};
 
     await willysService.GetDiscountedProducts(req);
 
     var result = willysService.GetProductRecords();
  
-    using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\willystest.csv", false,
+    using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\willystest16.csv", false,
                Encoding.UTF32))
            
     using (var csv = new CsvWriter(writer, new CultureInfo("se-SE")))

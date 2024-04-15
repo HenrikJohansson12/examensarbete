@@ -174,13 +174,13 @@ public class IcaServiceUnitTest
     {
         var httpClient = new HttpClient();
         var icaservice = new IcaService(httpClient, new WebApiDbContext());
-        var req = new GetDiscountedItemsIcaRequest{StoreId = "123"};
+        var req = new GetDiscountedItemsIcaRequest{StoreId = "1004101"};
 
        await icaservice.GetDiscountedProducts(req);
 
        var result = icaservice.GetRecords();
     
-       using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\icatest.csv", false,
+       using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\icatest16.csv", false,
                   Encoding.UTF32))
            
        using (var csv = new CsvWriter(writer, new CultureInfo("se-SE")))
