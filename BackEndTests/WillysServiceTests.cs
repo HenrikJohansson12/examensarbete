@@ -157,7 +157,7 @@ public async void Convert_Willys_Data_To_Csv()
 
     var result = willysService.GetProductRecords();
  
-    using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\willystest16.csv", false,
+    using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\willystest17.csv", false,
                Encoding.UTF32))
            
     using (var csv = new CsvWriter(writer, new CultureInfo("se-SE")))
