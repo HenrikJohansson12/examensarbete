@@ -180,7 +180,7 @@ public class IcaServiceUnitTest
 
        var result = icaservice.GetRecords();
     
-       using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\icatest16.csv", false,
+       using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\icatest17.csv", false,
                   Encoding.UTF32))
            
        using (var csv = new CsvWriter(writer, new CultureInfo("se-SE")))
