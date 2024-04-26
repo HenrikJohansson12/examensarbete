@@ -28,7 +28,7 @@ public class GetTop10MostDiscountedProducts: EndpointWithoutRequest<GetTop10Most
      var resultList = new List<ProductRecordDTO>();
      foreach (var record in list)
      {
-      resultList.Add(ProductRecordToDTO.ToDTO(record));
+      resultList.Add(ProductRecordToDTO.To(record));
      }
 
      Response.Result = resultList;

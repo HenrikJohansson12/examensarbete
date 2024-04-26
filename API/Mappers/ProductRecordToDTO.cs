@@ -5,7 +5,7 @@ namespace API.Mappers;
 
 public class ProductRecordToDTO
 {
-    public static ProductRecordDTO ToDTO(ProductRecord productRecord)
+    public static ProductRecordDTO To(ProductRecord productRecord)
     {
         var dto = new ProductRecordDTO()
         {
