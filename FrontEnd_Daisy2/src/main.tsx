@@ -7,6 +7,7 @@ import LandingPage from './routes/pages/LandingPage.tsx';
 import SignUpPage from './routes/pages/SignUpPage.tsx';
 import LoginPage from './routes/pages/LoginPage.tsx';
 import OfferPage from './routes/pages/Offers.tsx';
+import RecipePage from './routes/pages/RecipePage.tsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/offers",
         element: <OfferPage />
+      },
+      {
+        path: "/recipes",
+        element: <RecipePage />
       },
     ],
   },

@@ -45,6 +45,7 @@ public class WebApiDbContext : DbContext
         modelBuilder.Entity<Brand>().HasData(new List<Brand> { brand1, brand2 });
         modelBuilder.Entity<Store>().HasData(new List<Store> { store1, store2 });
 
+        
         base.OnModelCreating(modelBuilder);
         
     }
