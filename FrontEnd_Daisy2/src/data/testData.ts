@@ -3,7 +3,7 @@ import ProductRecord from './ProductRecord'; // Import your interface definition
 import { jsonData } from './testProductJson';
 // Read the JSON file
 
-console.log(jsonData);
+
 // Parse the JSON string
 const parsedData = JSON.parse(jsonData);
 
@@ -25,7 +25,5 @@ export const productRecords: ProductRecord[] = results.map((item: any) => ({
     MaxItems: item.maxItems,
     IsMemberOffer: item.isMemberOffer
 }));
-
-// Now you have an array of ProductRecord objects
 
 
