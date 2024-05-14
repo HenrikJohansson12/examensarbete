@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import React from "react";
 import { ingredientDB } from "../data/ingredientArray";
 import Ingredient from "../data/Ingredient";
 import IngredientToRecipe from "../data/IngredientToRecipe";
+import { RecipeContext } from "../contexts/RecipeContext";
 
 export default function AddIngredients() {
+    const context = useContext(RecipeContext)
+    const { addIngredient } = context;
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState<Ingredient[]>([]);
   const [amount, setAmount] = useState(0);
@@ -13,7 +16,7 @@ export default function AddIngredients() {
     IngredientToRecipe[]
   >([]);
 
-  const addIngredient = (ingredient: Ingredient) => {
+  const addIngredientsButtonClicked = (ingredient: Ingredient) => {
     const ingredientToRecipe: IngredientToRecipe ={
         Ingredient: ingredient,
         Amount: amount,
@@ -23,12 +26,13 @@ export default function AddIngredients() {
       ...prevIngredients,
       ingredientToRecipe,
     ]);
-    console.log(selectedIngredients);
+    addIngredient(ingredientToRecipe)
   };
 
   const clearSearch = () => {
     const emptySearchResults : Ingredient[] = [];
     setSearchResults(emptySearchResults);
+    setAmount(0);
   }
 
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -105,7 +109,7 @@ export default function AddIngredients() {
               </select>
               <button
                 className="btn btn-square"
-                onClick={() => addIngredient(result)}
+                onClick={() => addIngredientsButtonClicked(result)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -123,14 +127,6 @@ export default function AddIngredients() {
                 </svg>
               </button>
             </a>
-          </li>
-        ))}
-      </ul>
-
-      <ul className="menu bg-base-200 w-56 rounded-box">
-        {selectedIngredients.map((result, index) => (
-          <li key={index}>
-            <a>{result.Ingredient.Name + result.Amount + result.Unit}</a>
           </li>
         ))}
       </ul>

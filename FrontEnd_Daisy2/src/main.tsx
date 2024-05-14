@@ -8,6 +8,7 @@ import SignUpPage from './routes/pages/SignUpPage.tsx';
 import LoginPage from './routes/pages/LoginPage.tsx';
 import OfferPage from './routes/pages/Offers.tsx';
 import RecipePage from './routes/pages/RecipePage.tsx';
+import { RecipeProvider } from './contexts/RecipeContext.tsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,8 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <RecipeProvider>
     <RouterProvider router={router} />
+    </RecipeProvider>
   </React.StrictMode>
 );
