@@ -29,7 +29,7 @@ public class IngredientsTest
         {
             listOfIngredients.Add(new Ingredient()
             {
-                IngredientId = livsmedel.nummer,
+                SlvIngredientId = livsmedel.nummer,
                 Name = livsmedel.namn,
                 Version = livsmedel.version,
                 Type = livsmedel.livsmedelsTyp,

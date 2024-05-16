@@ -25,37 +25,8 @@ public class GetIngredientsTest: EndpointWithoutRequest<TestResponse>
 
     public override async Task HandleAsync( CancellationToken ct)
     {
-        var httpClient = new HttpClient();
-
-        var apiResponse = await 
-            httpClient.GetAsync(
-                " https://dataportal.livsmedelsverket.se/livsmedel/api/v1/livsmedel?offset=0&limit=2500&sprak=1");
-
-        string jsonData = await apiResponse.Content.ReadAsStringAsync();
-        
-        Root? root =
-            JsonSerializer.Deserialize<Root>(jsonData);
-
-        var listOfIngredients = new List<Ingredient>();
-
-        foreach (var livsmedel in root.livsmedel)
-        {
-            listOfIngredients.Add(new Ingredient()
-            {
-                IngredientId = livsmedel.nummer,
-                Name = livsmedel.namn,
-                Version = livsmedel.version,
-                Type = livsmedel.livsmedelsTyp,
-                Number = livsmedel.livsmedelsTypId
-            });
-        }
-
-        Response.Ingredients = listOfIngredients;
-        
-        _dbContext.Ingredients.AddRange(listOfIngredients);
-    await    _dbContext.SaveChangesAsync();
+        Response.Ingredients = await _dbContext.Ingredients.ToListAsync();
      await   SendAsync(Response, cancellation: ct);
-
     }
 }
 

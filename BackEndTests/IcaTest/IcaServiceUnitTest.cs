@@ -9,6 +9,7 @@ using API.Requests;
 using CsvHelper;
 using Database;
 using Database.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BackEndTests.IcaTest;
 
@@ -81,7 +82,7 @@ public class IcaServiceUnitTest
             }
             
             ));
-        var icaService = new IcaService(http, new WebApiDbContext());
+        var icaService = new IcaService(http, new WebApiDbContext(new DbContextOptions<WebApiDbContext>()));
         var request = new GetDiscountedItemsIcaRequest { StoreId = "" };
         // Test. 
         await  icaService.GetDiscountedProducts(request);
@@ -173,7 +174,7 @@ public class IcaServiceUnitTest
     public async void Convert_Ica_Data_To_Csv()
     {
         var httpClient = new HttpClient();
-        var icaservice = new IcaService(httpClient, new WebApiDbContext());
+        var icaservice = new IcaService(httpClient, new WebApiDbContext(new DbContextOptions<WebApiDbContext>()));
         var req = new GetDiscountedItemsIcaRequest{StoreId = "1004101"};
 
        await icaservice.GetDiscountedProducts(req);

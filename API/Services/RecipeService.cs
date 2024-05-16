@@ -29,7 +29,7 @@ public class RecipeService : IRecipeService
 
             foreach (var ingredient in req.Ingredients)
             {
-                var dbIngredient = await _dbContext.Ingredients.FirstOrDefaultAsync(x => x.IngredientId == ingredient.Ingredient.IngredientId);
+                var dbIngredient = await _dbContext.Ingredients.FirstOrDefaultAsync(x => x.SlvIngredientId == ingredient.Ingredient.IngredientId);
                 if (dbIngredient == null)
                 {
                     // Handle case where ingredient does not exist in the database

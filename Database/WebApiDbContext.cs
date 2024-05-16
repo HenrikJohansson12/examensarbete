@@ -14,14 +14,15 @@ public class WebApiDbContext : DbContext
     public DbSet<IngredientToRecipe> IngredientsToRecipes { get; set; }
     public DbSet<Ingredient> Ingredients { get; set; }
     
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    { 
-        optionsBuilder.UseSqlite("Data Source=WebApiDatabaseTest.db");
+
+    public WebApiDbContext(DbContextOptions<WebApiDbContext> options)
+        : base(options)
+    {
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
+        
         modelBuilder.Entity<Recipe>()
             .HasMany(r => r.Ingredients)
             .WithOne(ir => ir.Recipe)

@@ -54,7 +54,7 @@ public class WillysServiceTest
             Content = new StringContent(jsonContent)
         }));
         
-        var service = new WillysService(http, new WebApiDbContext());
+        var service = new WillysService(http, new WebApiDbContext(new DbContextOptions<WebApiDbContext>()));
     await service.GetDiscountedProducts(req);
 
       var result = service.GetProductRecords();
@@ -149,7 +149,7 @@ public class WillysServiceTest
 public async void Convert_Willys_Data_To_Csv()
 {
     var httpClient = new HttpClient();
-    var dbContext = new WebApiDbContext();
+    var dbContext = new WebApiDbContext(new DbContextOptions<WebApiDbContext>());
     var willysService = new WillysService(httpClient,dbContext);
     var req = new GetDiscountedItemsWillysRequest(){StoreId = "2110"};
 
