@@ -51,6 +51,9 @@ public class GetIngredientsTest: EndpointWithoutRequest<TestResponse>
         }
 
         Response.Ingredients = listOfIngredients;
+        
+        _dbContext.Ingredients.AddRange(listOfIngredients);
+    await    _dbContext.SaveChangesAsync();
      await   SendAsync(Response, cancellation: ct);
 
     }

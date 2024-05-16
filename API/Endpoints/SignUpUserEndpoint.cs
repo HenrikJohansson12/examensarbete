@@ -21,12 +21,10 @@ public class SignUpUserEndpoint: Endpoint<SignUpRequest>
 
         public override async Task HandleAsync(SignUpRequest req, CancellationToken ct)
         {
-
                 if (await _userService.SignUpUser(req))
                 {
                         await SendNoContentAsync(ct);
                 }
-
                 else await SendAsync(500, cancellation: ct);
         }
 }

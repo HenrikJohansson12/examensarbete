@@ -1,8 +1,8 @@
-// TestIngredient.tsx
 import React, { useContext } from "react";
 import AddIngredients from "./AddIngredients";
 import { RecipeContext } from "../contexts/RecipeContext";
 import IngredientsList from "./IngredientsList";
+import RecipeCard from "./RecipeCard";
 
 export default function TestIngredient() {
   const context = useContext(RecipeContext);
@@ -12,6 +12,27 @@ export default function TestIngredient() {
   }
 
   const { recipe, updateName, updateMinutes, updatePortions, updateDifficulty, updateInstructions } = context;
+
+  const handleSave = async () => {
+    try {
+      console.log(recipe);
+      const response = await fetch('http://localhost:5290/api/saverecipe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(recipe)
+      });
+      if (response.ok) {
+        alert("Recipe saved successfully!");
+      } else {
+        alert("Failed to save recipe.");
+      }
+    } catch (error) {
+      console.error("Error saving recipe:", error);
+      alert("An error occurred while saving the recipe.");
+    }
+  };
 
   return (
     <div className="flex flex-col justify-evenly p-4">
@@ -90,9 +111,34 @@ export default function TestIngredient() {
             <button>close</button>
           </form>
         </dialog>
+
+        <dialog id="my_modal_4" className="modal">
+          <div className="modal-box flex flex-col justify-center items-center">
+           <RecipeCard recipe={recipe}/>
+           <button
+          className="btn btn-primary w-full max-w-xs"
+          onClick={handleSave}
+        >
+          Spara
+        </button>
+          </div>
+          <form method="dialog" className="modal-backdrop">
+            <button>close</button>
+          </form>
+        </dialog>
       </div>
 
       <IngredientsList />
+      <div>
+      <button
+          className="btn btn-primary w-full max-w-xs"
+          onClick={() => document.getElementById("my_modal_4").showModal()}
+       
+        >
+          Förhandsgranska
+        </button>
+
+      </div>
     </div>
   );
 }
