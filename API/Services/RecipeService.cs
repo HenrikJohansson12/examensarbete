@@ -57,6 +57,7 @@ public class RecipeService : IRecipeService
             };
 
             _dbContext.Recipes.Add(recipe);
+            _dbContext.IngredientsToRecipes.AddRange(ingredientToRecipeList);
             await _dbContext.SaveChangesAsync();
             return true;
         }
@@ -70,6 +71,13 @@ public class RecipeService : IRecipeService
 
     public async Task<List<Recipe>> GetAllRecipes()
     {
-        return await _dbContext.Recipes.ToListAsync();
+        var recipes = await _dbContext.Recipes
+            .Include(r => r.Ingredients)
+            .ThenInclude(ir => ir.Ingredient)
+            .ToListAsync();
+
+        return recipes;
+
+        
     }
 }

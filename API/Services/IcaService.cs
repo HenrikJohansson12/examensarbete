@@ -38,7 +38,7 @@ public class IcaService : IIcaService
     public async Task<bool> GetDiscountedProducts(GetDiscountedItemsIcaRequest req)
     {
         var productList = new List<Product>();
-
+        var store = _dbContext.Stores.FirstOrDefault(x => x.InternalStoreId == req.StoreId);
         var httpString1 = new Uri($"https://handlaprivatkund.ica.se/stores/{req.StoreId}/api/v5/products/",
             UriKind.Absolute);
 
@@ -105,10 +105,11 @@ public class IcaService : IIcaService
         {
             var productRecord = IcaToProductRecordMapper.Map(product);
             productRecords.Add(productRecord);
+            productRecord.Store = store;
             _dbContext.ProductRecords.Add(productRecord);
-            await _dbContext.SaveChangesAsync();
+           
         }
-
+        await _dbContext.SaveChangesAsync();
         return true;
     }
 }

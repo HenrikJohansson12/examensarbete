@@ -3,8 +3,6 @@ using API.Properties.Services;
 using API.Services;
 using Database;
 using FastEndpoints.Swagger;
-using Microsoft.EntityFrameworkCore;
-using SQLitePCL;
 
 var builder = WebApplication.CreateBuilder();
 var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "Data Source=C:\\dev\\Examensarbete\\Database\\WebApiDatabaseTest.db";

@@ -26,15 +26,20 @@ public class WebApiDbContext : DbContext
         modelBuilder.Entity<Recipe>()
             .HasMany(r => r.Ingredients)
             .WithOne(ir => ir.Recipe)
-            .HasForeignKey(ir => ir.RecipeId);
+            .HasForeignKey(ir => ir.RecipeId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<IngredientToRecipe>()
             .HasOne(ir => ir.Ingredient)
             .WithMany()
             .HasForeignKey(ir => ir.IngredientId);
-    }
 
-    /*var brand1 = new Brand { Id = 1, Name = "Ica" };
+        modelBuilder.Entity<IngredientToRecipe>()
+            .HasOne(ir => ir.Recipe)
+            .WithMany(r => r.Ingredients)
+            .HasForeignKey(ir => ir.RecipeId);
+
+    var brand1 = new Brand { Id = 1, Name = "Ica" };
     var brand2 = new Brand { Id = 2, Name = "Willys" };
 
     var store1 = new Store
@@ -58,44 +63,11 @@ public class WebApiDbContext : DbContext
         City = "Borås",
         BrandId = brand1.Id
     };
-
-
+    
     modelBuilder.Entity<Brand>().HasData(new List<Brand> { brand1, brand2 });
     modelBuilder.Entity<Store>().HasData(new List<Store> { store1, store2 });
-
     base.OnModelCreating(modelBuilder);
-
 }
-
-
-static async Task<List<Ingredient>> GetIngridientsList()
-{
-    var httpClient = new HttpClient();
-
-    var apiResponse = await
-        httpClient.GetAsync(
-            " https://dataportal.livsmedelsverket.se/livsmedel/api/v1/livsmedel?offset=0&limit=10&sprak=1");
-
-    string jsonData = await apiResponse.Content.ReadAsStringAsync();
-
-    Root? root =
-        JsonSerializer.Deserialize<Root>(jsonData);
-
-    var listOfIngredients = new List<Ingredient>();
-
-    foreach (var livsmedel in root.livsmedel)
-    {
-        listOfIngredients.Add(new Ingredient()
-        {
-            IngredientId = livsmedel.nummer,
-            Name = livsmedel.namn,
-            Version = livsmedel.version,
-            Type = livsmedel.livsmedelsTyp,
-            Number = livsmedel.livsmedelsTypId
-        });
-    }
-
-    return listOfIngredients;
-}*/
+    
     }
 

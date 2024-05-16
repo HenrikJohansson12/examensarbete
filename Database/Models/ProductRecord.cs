@@ -18,6 +18,7 @@ public class ProductRecord
     public int  MinItems { get; set; }
     public int MaxItems { get; set; }
     public bool IsMemberOffer { get; set; }
+    public int StoreId { get; set; }
     public Store Store { get; set; }
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
