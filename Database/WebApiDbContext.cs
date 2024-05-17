@@ -1,11 +1,13 @@
 ﻿using System.Text.Json;
 using Database.Models;
 using Database.Models.Livsmedelsverket;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Database;
 
-public class WebApiDbContext : DbContext
+public class WebApiDbContext : IdentityDbContext<IdentityUser>
 {
     public DbSet<ProductRecord> ProductRecords { get; set; }
     public DbSet<Store> Stores { get; set; }

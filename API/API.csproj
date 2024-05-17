@@ -8,8 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="FastEndpoints" Version="5.22.0" />
-        <PackageReference Include="FastEndpoints.Swagger" Version="5.22.0" />
+        <PackageReference Include="FastEndpoints" Version="5.25.0" />
+        <PackageReference Include="FastEndpoints.Security" Version="5.25.0" />
+        <PackageReference Include="FastEndpoints.Swagger" Version="5.25.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
         <PackageReference Include="Moq" Version="4.20.70" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
