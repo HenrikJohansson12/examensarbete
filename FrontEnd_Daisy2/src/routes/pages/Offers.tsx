@@ -4,7 +4,7 @@ import { productRecords } from "../../data/testData";
 export default function OfferPage(){
 
   return (
-    <div className="grid grid-cols-1 gap-x-2 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+    <div className="grid grid-cols-2 gap-x-2 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
    
         {productRecords.map((productRecord) => (
             <div key={productRecord.Id} className='card w-56 bg-base-100 shadow-xl'>

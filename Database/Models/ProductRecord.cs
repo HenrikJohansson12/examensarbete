@@ -22,6 +22,10 @@ public class ProductRecord
     public Store Store { get; set; }
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
+    public int IngredientId { get; set; }
+    public int CategoryId { get; set; }
+    public bool IsReviewed { get; set; }
+    
 
     
     //Hade varit nice att hämta bilden och spara nånstans?

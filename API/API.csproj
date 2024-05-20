@@ -5,18 +5,25 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <InvariantGlobalization>false</InvariantGlobalization>
+        <UserSecretsId>d356aa13-1542-4f76-9c6b-0d503e9e79c3</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="FastEndpoints" Version="5.25.0" />
         <PackageReference Include="FastEndpoints.Security" Version="5.25.0" />
         <PackageReference Include="FastEndpoints.Swagger" Version="5.25.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.3" />
+        <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.4" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.5" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.5" />
         <PackageReference Include="Moq" Version="4.20.70" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.2" />
     </ItemGroup>
 
     <ItemGroup>

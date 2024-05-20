@@ -9,6 +9,11 @@ namespace Database;
 
 public class WebApiDbContext : IdentityDbContext<IdentityUser>
 {
+    public WebApiDbContext(DbContextOptions<WebApiDbContext> options)
+        : base(options)
+    {
+    }
+
     public DbSet<ProductRecord> ProductRecords { get; set; }
     public DbSet<Store> Stores { get; set; }
     public DbSet<Brand> Brands { get; set; }
@@ -17,10 +22,6 @@ public class WebApiDbContext : IdentityDbContext<IdentityUser>
     public DbSet<Ingredient> Ingredients { get; set; }
     
 
-    public WebApiDbContext(DbContextOptions<WebApiDbContext> options)
-        : base(options)
-    {
-    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

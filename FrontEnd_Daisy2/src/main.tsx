@@ -9,7 +9,7 @@ import LoginPage from './routes/pages/LoginPage.tsx';
 import OfferPage from './routes/pages/Offers.tsx';
 import RecipePage from './routes/pages/RecipePage.tsx';
 import { RecipeProvider } from './contexts/RecipeContext.tsx';
-
+import { GoogleOAuthProvider } from '@react-oauth/google';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -41,8 +41,10 @@ const router = createBrowserRouter([
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <GoogleOAuthProvider clientId='485776855476-pqbc2gcckp64u0ugjjt9hflc0cgmedpn.apps.googleusercontent.com'> 
     <RecipeProvider>
     <RouterProvider router={router} />
     </RecipeProvider>
+    </GoogleOAuthProvider>
   </React.StrictMode>
 );
