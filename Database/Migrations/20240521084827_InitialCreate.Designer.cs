@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Database.Migrations
 {
     [DbContext(typeof(WebApiDbContext))]
-    [Migration("20240517103354_identityAdded")]
-    partial class identityAdded
+    [Migration("20240521084827_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,138 @@ namespace Database.Migrations
                         {
                             Id = 2,
                             Name = "Willys"
+                        });
+                });
+
+            modelBuilder.Entity("Database.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Barnprodukter"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Bröd och kakor"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Chark/Delikatess"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Dessert/Mellanmål"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Djur"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = "Drycker"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Name = "Fisk och skaldjur"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Name = "Frukt och bär"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            Name = "Färdigmat"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            Name = "Glass"
+                        },
+                        new
+                        {
+                            Id = 11,
+                            Name = "Grönsaker"
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Name = "Hem och hushåll"
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Name = "Hälsa"
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Name = "Korv och pålägg"
+                        },
+                        new
+                        {
+                            Id = 15,
+                            Name = "Kroppsvård"
+                        },
+                        new
+                        {
+                            Id = 16,
+                            Name = "Kött"
+                        },
+                        new
+                        {
+                            Id = 17,
+                            Name = "Mejeri"
+                        },
+                        new
+                        {
+                            Id = 18,
+                            Name = "Ost"
+                        },
+                        new
+                        {
+                            Id = 19,
+                            Name = "Skafferi"
+                        },
+                        new
+                        {
+                            Id = 20,
+                            Name = "Kaffe"
+                        },
+                        new
+                        {
+                            Id = 21,
+                            Name = "Snacks och godis"
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Name = "Vegetariskt"
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Name = "Övrigt"
                         });
                 });
 
@@ -113,6 +245,9 @@ namespace Database.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("CountryOfOrigin")
                         .HasColumnType("INTEGER");
 
@@ -125,7 +260,13 @@ namespace Database.Migrations
                     b.Property<DateOnly>("EndDate")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("IngredientId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<bool>("IsMemberOffer")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool?>("IsReviewed")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("MaxItems")
@@ -158,6 +299,10 @@ namespace Database.Migrations
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("IngredientId");
 
                     b.HasIndex("StoreId");
 
@@ -463,11 +608,23 @@ namespace Database.Migrations
 
             modelBuilder.Entity("Database.Models.ProductRecord", b =>
                 {
+                    b.HasOne("Database.Models.Category", "Category")
+                        .WithMany("ProductRecords")
+                        .HasForeignKey("CategoryId");
+
+                    b.HasOne("Database.Models.Ingredient", "Ingredient")
+                        .WithMany("ProductRecords")
+                        .HasForeignKey("IngredientId");
+
                     b.HasOne("Database.Models.Store", "Store")
                         .WithMany()
                         .HasForeignKey("StoreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Ingredient");
 
                     b.Navigation("Store");
                 });
@@ -537,6 +694,16 @@ namespace Database.Migrations
             modelBuilder.Entity("Database.Models.Brand", b =>
                 {
                     b.Navigation("Stores");
+                });
+
+            modelBuilder.Entity("Database.Models.Category", b =>
+                {
+                    b.Navigation("ProductRecords");
+                });
+
+            modelBuilder.Entity("Database.Models.Ingredient", b =>
+                {
+                    b.Navigation("ProductRecords");
                 });
 
             modelBuilder.Entity("Database.Models.Recipe", b =>

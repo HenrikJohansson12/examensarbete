@@ -22,9 +22,11 @@ public class ProductRecord
     public Store Store { get; set; }
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
-    public int IngredientId { get; set; }
-    public int CategoryId { get; set; }
-    public bool IsReviewed { get; set; }
+    public Ingredient Ingredient { get; set; }
+    public int? IngredientId { get; set; }
+    public int? CategoryId { get; set; }
+    public Category? Category { get; set; }
+    public bool? IsReviewed { get; set; }
     
 
     

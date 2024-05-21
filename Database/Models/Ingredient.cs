@@ -8,4 +8,5 @@ public class Ingredient
         public int Number { get; set; }
         public DateTime Version { get; set; }
         public string Name { get; set; }
+        public IQueryable<ProductRecord> ProductRecords { get; set; }
 }

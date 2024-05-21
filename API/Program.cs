@@ -12,7 +12,7 @@ using API.Services;
 using FastEndpoints.Swagger;
 using Google.Apis.Auth;
 
-var builder = WebApplication.CreateBuilder();
+var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "Data Source=C:\\dev\\Examensarbete\\Database\\WebApiDatabaseTest.db";
 var configuration = builder.Configuration;
 
@@ -22,10 +22,10 @@ builder.Services.AddScoped<IWillysService, WillysService>();
 builder.Services.AddScoped<IIcaService, IcaService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IRecipeService, RecipeService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddSqlite<WebApiDbContext>(connectionString);
-
-
 
 builder.Services.AddIdentityApiEndpoints<IdentityUser>()
     .AddEntityFrameworkStores<WebApiDbContext>();
@@ -62,10 +62,12 @@ app.UseAuthorization();
 app.MapIdentityApi<IdentityUser>();
 app.UseFastEndpoints();
 app.UseSwaggerGen();
-await app.Services
+
+/*await app.Services
     .CreateScope().ServiceProvider.GetRequiredService<WebApiDbContext>()
     .Database
     .EnsureCreatedAsync();
+*/
 app.Run();
 
 
