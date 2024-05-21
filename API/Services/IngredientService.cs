@@ -20,13 +20,21 @@ internal class IngredientService: IIngredientService
     }
     public async Task<List<IngredientDTO>> SearchIngredient(string searchWord)
     {
-    var  searchResults =  await    _dbContext.Ingredients.Where(i => i.Name.ToLower().Contains(searchWord)).ToListAsync();
-    var response = new List<IngredientDTO>();
-    for (int i = 0; i < searchResults.Count; i++)
-    {
-        response.Add(IngredientToIngredientDto.To(searchResults[i]));
+        searchWord = searchWord.ToLower();
+        var startsWithResults = await _dbContext.Ingredients
+            .Where(i => i.Name.ToLower().StartsWith(searchWord))
+            .ToListAsync();
+
+        var containsResults = await _dbContext.Ingredients
+            .Where(i => i.Name.ToLower().Contains(searchWord) && !i.Name.ToLower().StartsWith(searchWord))
+            .ToListAsync();
+
+        var searchResults = startsWithResults.Concat(containsResults).Distinct().ToList();
+
+        var response = searchResults.Select(IngredientToIngredientDto.To).ToList();
+
+        return response;
     }
 
-    return response;
-    }
+
 }

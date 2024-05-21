@@ -1,5 +1,6 @@
 ﻿using API.Mappers;
 using API.Models;
+using API.Requests;
 using Database;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,6 +9,7 @@ namespace API.Services;
 public interface IProductService
 {
     Task<List<MapOfferDto>>GetUnmappedOffers();
+    Task<bool> MapOffers(List<UpdateOffersDto> offers);
 }
 public class ProductService:IProductService
 {
@@ -29,5 +31,30 @@ public class ProductService:IProductService
         }
 
         return response;
+    }
+
+    public async Task<bool> MapOffers(List<UpdateOffersDto> offers)
+    {
+        try
+        {
+            for (int i = 0; i < offers.Count; i++)
+            {
+                var productRecord =
+                    await _dbContext.ProductRecords.FirstOrDefaultAsync(p => p.Id == offers[i].ProductRecordId);
+                productRecord.CategoryId = offers[i].CategoryId;
+                productRecord.IngredientId = offers[i].IngredientId;
+                productRecord.IsReviewed = true;
+                await   _dbContext.SaveChangesAsync();
+            }
+
+            return true;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+            
+        }
+    
     }
 }

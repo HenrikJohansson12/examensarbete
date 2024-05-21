@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { MappedOffer } from "../data/MapOfferDTO";
+import { MappedOffer, PostMappedOffer, mapToPostMappedOffer } from "../data/MapOfferDTO";
 import {
   fetchCategories,
   fetchUnmappedOffers,
@@ -35,6 +35,28 @@ export default function MappedOfferList() {
     loadMappedOffers();
   }, []); // Tom array betyder att effekten bara körs när komponenten laddas första gången
 
+  const handleSave = async () => {
+    try {
+      const postMappedOffers: PostMappedOffer[] = mappedOffers.map(mapToPostMappedOffer);
+      const payload = { offers: postMappedOffers };
+      const response = await fetch('http://localhost:5290/api/updateOffers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+      if (response.ok) {
+        alert("Offers saved successfully!");
+      } else {
+        alert("Failed to save offers.");
+      }
+    } catch (error) {
+      console.error("Error saving offers:", error);
+      alert("An error occurred while saving the offers.");
+    }
+  };
+
   const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>, offerId: number) => {
     const selectedCategoryId = parseInt(event.target.value);
     const selectedCategory = categories.find(category => category.Id === selectedCategoryId);
@@ -67,9 +89,7 @@ export default function MappedOfferList() {
     setIngredientResults([]);
     setActiveOfferId(null);
   };
-  const log = () =>{
-    console.log(mappedOffers)
-  }
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -80,11 +100,15 @@ export default function MappedOfferList() {
 
   return (
     <div className="p-4 bg-white shadow-md rounded-md">
-        <button onClick={log} >Console log</button>
+         <button 
+        onClick={handleSave} 
+        className="mt-4 p-2 bg-blue-500 text-white rounded-md"
+      >
+        SPARA
+      </button>
       <h2 className="text-xl font-bold mb-4">Offers List</h2>
       {mappedOffers.map((offer) => (
         <div key={offer.id} className="mb-4 p-4 border rounded-md">
-        
           <div className="mb-2">
             <label className="block text-gray-700">Name:</label>
             <p>{offer.name}</p>
@@ -98,12 +122,7 @@ export default function MappedOfferList() {
             <p>{offer.description || "No description"}</p>
           </div>
           <div className="mb-2">
-            <label
-              className="block text-gray-700"
-              htmlFor={`CategoryId-${offer.id}`}
-            >
-              Category:
-            </label>
+            <label className="block text-gray-700" htmlFor={`CategoryId-${offer.id}`}>Category:</label>
             <select
               name="CategoryId"
               id={`CategoryId-${offer.id}`}
@@ -144,6 +163,7 @@ export default function MappedOfferList() {
           </div>
         </div>
       ))}
+     
     </div>
   );
 }
