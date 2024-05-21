@@ -8,7 +8,8 @@ namespace Database
         public WebApiDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<WebApiDbContext>();
-            optionsBuilder.UseSqlite("Data Source=C:\\dev\\Examensarbete\\Database\\WebApiDatabaseTest.db");
+            optionsBuilder.UseSqlite("Data Source=C:\\dev\\Examensarbete\\Database\\WebApiDatabaseTest.db", 
+                b => b.MigrationsAssembly("Database"));
 
             return new WebApiDbContext(optionsBuilder.Options);
         }

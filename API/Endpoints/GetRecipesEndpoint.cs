@@ -17,7 +17,7 @@ public class GetRecipesEndpoint : EndpointWithoutRequest<GetRecipesResponse>
     public override void Configure()
     {
         Get("/api/getrecipes");
-     //   AllowAnonymous();
+       AllowAnonymous();
     }
 
     public override async Task HandleAsync(CancellationToken ct)

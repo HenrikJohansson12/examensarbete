@@ -104,6 +104,7 @@ public class IcaService : IIcaService
         foreach (var product in productList)
         {
             var productRecord = IcaToProductRecordMapper.Map(product);
+            productRecord.IsReviewed = false;
             productRecords.Add(productRecord);
             productRecord.Store = store;
             _dbContext.ProductRecords.Add(productRecord);

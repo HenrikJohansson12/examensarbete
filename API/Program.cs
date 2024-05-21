@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using API.Properties.Services;
 using API.Services;
+using Database.Models;
 using FastEndpoints.Swagger;
 using Google.Apis.Auth;
 
@@ -24,6 +25,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IRecipeService, RecipeService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IIngredientService, IngredientService>();
 builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddSqlite<WebApiDbContext>(connectionString);
 

@@ -19,7 +19,7 @@ public class GetIngredientsTest: EndpointWithoutRequest<TestResponse>
     }
     public override void Configure()
     {
-        Get("/api/test2");
+        Get("/api/ingredients");
         AllowAnonymous();
     }
 
