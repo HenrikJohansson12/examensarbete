@@ -10,6 +10,10 @@ import OfferPage from './routes/pages/Offers.tsx';
 import RecipePage from './routes/pages/RecipePage.tsx';
 import { RecipeProvider } from './contexts/RecipeContext.tsx';
 import { GoogleOAuthProvider } from '@react-oauth/google';
+import { convertToUnMappedOffers, offerData, UnMappedOffer } from './data/MapOfferDTO.ts';
+import MappedOfferList from './components/MapOffers.tsx';
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/offers",
-        element: <OfferPage />
+        element: <MappedOfferList />
       },
       {
         path: "/recipes",

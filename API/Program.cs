@@ -35,6 +35,18 @@ builder.Services.AddIdentityApiEndpoints<IdentityUser>()
 builder.Services.AddFastEndpoints();
 builder.Services.SwaggerDocument(); // Add Swagger
 
+// Configure CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
+
+
 // Configure JWT authentication
 builder.Services.AddAuthentication(options =>
     {
@@ -58,6 +70,8 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+
+app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();

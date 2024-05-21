@@ -6,3 +6,9 @@ export default interface Ingredient{
     Version: Date;
     Name: string;
 }
+
+export  interface IngredientDto{
+    id: number;
+    slvIngredientId: number;
+    name: string;
+}

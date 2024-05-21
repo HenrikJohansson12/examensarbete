@@ -24,10 +24,12 @@ public class SearchIngredientsEndpoint:Endpoint<SearchIngredientRequest, SearchI
     {
         if (String.IsNullOrWhiteSpace(req.SearchWord))
         {
-            await SendOkAsync(cancellation: ct);
+            await SendNoContentAsync(cancellation: ct);
         }
-
-        Response.Ingredients = await _ingredientService.SearchIngredient(req.SearchWord);
-        await SendAsync(Response, cancellation: ct);
+        else
+        {
+            Response.Ingredients = await _ingredientService.SearchIngredient(req.SearchWord);
+            await SendAsync(Response, cancellation: ct);
+        }
     }
-    }
+}
