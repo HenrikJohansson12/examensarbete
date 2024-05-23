@@ -16,7 +16,7 @@ export default function IngredientsList() {
       <ul className="list-disc list-inside">
         {recipe?.Ingredients.map((ingredient) => (
           <li key={ingredient.Ingredient.Id} className="my-2">
-            {ingredient.Ingredient.Name} {ingredient.Amount}
+            {ingredient.Ingredient.name} {ingredient.Amount}
             {ingredient.Unit}
             <button className="btn btn-square"
             onClick={()=> deleteIngredient(ingredient) }>

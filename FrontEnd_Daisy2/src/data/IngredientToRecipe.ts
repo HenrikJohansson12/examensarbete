@@ -1,7 +1,7 @@
-import Ingredient from "./Ingredient";
+import Ingredient, { IngredientDto } from "./Ingredient";
 
 export default interface IngredientToRecipe{
-Ingredient: Ingredient ;
+Ingredient: IngredientDto ;
 Amount: number;
 Unit: string;
 

@@ -1,115 +1,105 @@
 import { useContext, useState } from "react";
 import React from "react";
-import { ingredientDB } from "../data/ingredientArray";
-import Ingredient from "../data/Ingredient";
+import { fetchIngredients } from "../data/FetchIngredients";
+import  { IngredientDto } from "../data/Ingredient";
 import IngredientToRecipe from "../data/IngredientToRecipe";
 import { RecipeContext } from "../contexts/RecipeContext";
 
 export default function AddIngredients() {
-    const context = useContext(RecipeContext)
-    const { addIngredient } = context;
-  const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState<Ingredient[]>([]);
-  const [amount, setAmount] = useState(0);
-  const [unit, setUnit] = useState("g");
-  const [selectedIngredients, setSelectedIngredients] = useState<
-    IngredientToRecipe[]
-  >([]);
+  const context = useContext(RecipeContext);
 
-  const addIngredientsButtonClicked = (ingredient: Ingredient) => {
-    const ingredientToRecipe: IngredientToRecipe ={
-        Ingredient: ingredient,
-        Amount: amount,
-        Unit: unit
+  if (!context) {
+    throw new Error("AddIngredients must be used within a RecipeProvider");
+  }
+
+  const { addIngredient } = context;
+  const [ingredientQuery, setIngredientQuery] = useState<string>('');
+  const [ingredientResults, setIngredientResults] = useState<IngredientDto[]>([]);
+  const [selectedIngredients, setSelectedIngredients] = useState<IngredientToRecipe[]>([]);
+  const [amounts, setAmounts] = useState<{ [key: number]: number }>({});
+  const [units, setUnits] = useState<{ [key: number]: string }>({});
+
+  const addIngredientsButtonClicked = (ingredient: IngredientDto, index: number) => {
+    const ingredientToRecipe: IngredientToRecipe = {
+      Ingredient: ingredient,
+      Amount: amounts[index] || 0,
+      Unit: units[index] || "g",
     };
     setSelectedIngredients((prevIngredients) => [
       ...prevIngredients,
       ingredientToRecipe,
     ]);
-    addIngredient(ingredientToRecipe)
+    addIngredient(ingredientToRecipe);
+    console.log(ingredientToRecipe);
   };
 
-  const clearSearch = () => {
-    const emptySearchResults : Ingredient[] = [];
-    setSearchResults(emptySearchResults);
-    setAmount(0);
-  }
-
-  const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    setSearchTerm(value);
-    // Filter items based on search term
-    const filteredResults = ingredientDB.filter((ingredient) =>
-      ingredient.Name.toLowerCase().includes(value.toLowerCase())
-    );
-    setSearchResults(filteredResults);
+  const handleIngredientSearch = async (query: string) => {
+    setIngredientQuery(query);
+    if (query.length > 2) {
+      const results = await fetchIngredients(query);
+      setIngredientResults(results);
+    } else {
+      setIngredientResults([]);
+    }
   };
 
-  const handleAmountInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value;
-    const integerValue = parseInt(value);
-    setAmount(integerValue);
+  const handleAmountInputChange = (index: number, value: number) => {
+    setAmounts((prevAmounts) => ({
+      ...prevAmounts,
+      [index]: value,
+    }));
   };
 
-  const handleUnitInputChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setUnit(e.target.value);
+  const handleUnitInputChange = (index: number, value: string) => {
+    setUnits((prevUnits) => ({
+      ...prevUnits,
+      [index]: value,
+    }));
   };
 
   return (
     <div className="flex flex-col items-center h-screen">
-        <div className=" flex flex-row">
-      <input
-        type="text"
-        placeholder="Type here"
-        className="input input-bordered w-full max-w-xs"
-        value={searchTerm}
-        onChange={handleSearchInputChange}
-      />
-      <button
-                className="btn btn-square"
-                onClick={clearSearch}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
-                  />
-                </svg>
-              </button>
+      <div className="flex flex-row">
+        <input
+          type="text"
+          placeholder="Sök ingrediens"
+          className="input input-bordered w-full max-w-xs"
+          value={ingredientQuery}
+          onChange={(e) => handleIngredientSearch(e.target.value)}
+        />
       </div>
-      <ul className="menu bg-base-500 rounded-box">
-        {searchResults.map((result, index) => (
-          <li key={index}>
-            <a>
-              {result.Name}
-              <input
-                value={amount}
-                onChange={handleAmountInputChange}
-                type="number"
-                placeholder="Amount"
-                className="input input-bordered w-16 min-w-m"
-              />
-              <select
-                className="select select-bordered w-full max-w-xs"
-                onChange={handleUnitInputChange}
-              > 
-                <option value="g">g</option>
-                <option value="dl">dl</option>
-                <option value="msk">msk</option>
-                <option value="tsk">tsk</option>
-                <option value="krm">krm</option>
-              </select>
+      <ul className="menu bg-base-500 rounded-box mt-4">
+        {ingredientResults.map((result, index) => (
+          <li key={index} className="flex flex-col items-start">
+            <a className="w-full">
+              {result.name}
+              <div className="mt-2">
+                <label className="block text-sm font-medium text-gray-700">Mängd</label>
+                <input
+                  value={amounts[index] || ''}
+                  onChange={(e) => handleAmountInputChange(index, parseInt(e.target.value))}
+                  type="number"
+                  placeholder=""
+                  className="input input-bordered w-20"
+                />
+              </div>
+              <div className="mt-2">
+                <label className="block text-sm font-medium text-gray-700">Enhet</label>
+                <select
+                  value={units[index] || "g"}
+                  className="select select-bordered w-full max-w-xs"
+                  onChange={(e) => handleUnitInputChange(index, e.target.value)}
+                >
+                  <option value="g">g</option>
+                  <option value="dl">dl</option>
+                  <option value="msk">msk</option>
+                  <option value="tsk">tsk</option>
+                  <option value="krm">krm</option>
+                </select>
+              </div>
               <button
-                className="btn btn-square"
-                onClick={() => addIngredientsButtonClicked(result)}
+                className="btn btn-square mt-2"
+                onClick={() => addIngredientsButtonClicked(result, index)}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

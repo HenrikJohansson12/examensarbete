@@ -11,14 +11,21 @@ import RecipePage from './routes/pages/RecipePage.tsx';
 import { RecipeProvider } from './contexts/RecipeContext.tsx';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { convertToUnMappedOffers, offerData, UnMappedOffer } from './data/MapOfferDTO.ts';
-import MappedOfferList from './components/MapOffers.tsx';
+import MappedOfferList from './routes/pages/MapOffers.tsx';
+import CreateRecipe from './routes/pages/CreateRecipe.tsx';
+import TestIngredient from './components/TestIngredient.tsx';
+import Recipe from './routes/pages/Recipe.tsx';
+import ViewRecipes from './routes/pages/ViewRecipes.tsx';
+import { Provider } from 'react-redux';
+import store from './redux/store.ts';
+import MyProfile from './routes/pages/MyProfile.tsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    //lägg till error element
+    // Lägg till error element om det behövs
     children: [
       {
         path: "/",
@@ -33,12 +40,30 @@ const router = createBrowserRouter([
         element: <LoginPage />
       },
       {
+        path: "/profile",
+        element: <MyProfile />
+      },
+      {
         path: "/offers",
+        element: <OfferPage />
+      },
+      {
+        path: "/mapoffers",
         element: <MappedOfferList />
       },
       {
         path: "/recipes",
-        element: <RecipePage />
+        element: <Recipe />,
+        children: [
+          {
+            path: "",
+            element: <ViewRecipes />
+          },
+          {
+            path: "new",
+            element: <CreateRecipe />
+          }
+        ]
       },
     ],
   },
@@ -46,9 +71,11 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <GoogleOAuthProvider clientId='485776855476-pqbc2gcckp64u0ugjjt9hflc0cgmedpn.apps.googleusercontent.com'> 
+    <Provider store={store}>
     <RecipeProvider>
     <RouterProvider router={router} />
     </RecipeProvider>
+    </Provider>
     </GoogleOAuthProvider>
   </React.StrictMode>
 );

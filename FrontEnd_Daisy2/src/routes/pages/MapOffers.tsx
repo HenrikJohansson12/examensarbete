@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { MappedOffer, PostMappedOffer, mapToPostMappedOffer } from "../data/MapOfferDTO";
+import { MappedOffer, PostMappedOffer, mapToPostMappedOffer } from "../../data/MapOfferDTO";
 import {
   fetchCategories,
   fetchUnmappedOffers,
   fetchIngredients,
-} from "../data/FetchIngredients";
-import Category from "../data/Category";
-import { IngredientDto } from "../data/Ingredient";
+} from "../../data/FetchIngredients";
+import Category from "../../data/Category";
+import { IngredientDto } from "../../data/Ingredient";
 
 export default function MappedOfferList() {
   const [mappedOffers, setMappedOffers] = useState<MappedOffer[]>([]);
