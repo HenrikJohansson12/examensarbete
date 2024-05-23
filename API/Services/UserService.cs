@@ -1,28 +1,43 @@
 ﻿using API.Requests;
+using Database;
 using Database.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace API.Services;
 
 public interface IUserService
 {
-    Task<bool> SignUpUser(SignUpRequest req);
+
+    Task<bool> UpdateUserInformation(UpdateUserInformationRequest req, string userName);
 }
 
 public class UserService: IUserService
 {
-    public static List<User> listOfUsers = new List<User>();
-    public async Task<bool> SignUpUser(SignUpRequest req)
+    private WebApiDbContext _dbContext;
+
+    public UserService(WebApiDbContext dbContext)
     {
-        var newUser = new User()
+        _dbContext = dbContext;
+    }
+    public static List<User> listOfUsers = new List<User>();
+    public async Task<bool> UpdateUserInformation(UpdateUserInformationRequest req, string userName)
+    {
+        var userToUpdate = await _dbContext.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+        if (userToUpdate is null)
         {
-            EmailAddress = req.EmailAddress,
-            DisplayName = req.DisplayName,
-            Password = req.Password
-        };
-        
-        //Todo Check if email or displayName exist in db. 
-        
-        listOfUsers.Add(newUser);
+            return false;
+        }
+        if (! req.DisplayName.IsNullOrEmpty())
+        {
+            userToUpdate.DisplayName = req.DisplayName;
+        }
+        if (! req.ZipCode.IsNullOrEmpty())
+        {
+            userToUpdate.ZipCode = req.ZipCode;
+        }
+
+        await _dbContext.SaveChangesAsync();
         return true;
     }
 }

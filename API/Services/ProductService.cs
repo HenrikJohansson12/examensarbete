@@ -1,5 +1,6 @@
 ﻿using API.Mappers;
 using API.Models;
+using API.Models.DTOS;
 using API.Requests;
 using Database;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ namespace API.Services;
 
 public interface IProductService
 {
+    Task<List<ProductRecordDto>> GetTopTenOffers();
     Task<List<MapOfferDto>>GetUnmappedOffers();
     Task<bool> MapOffers(List<UpdateOffersDto> offers);
 }
@@ -19,6 +21,12 @@ public class ProductService:IProductService
     {
         _dbContext = dbContext;
     }
+
+    public Task<List<ProductRecordDto>> GetTopTenOffers()
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<List<MapOfferDto>>GetUnmappedOffers() 
     {
         var response = new List<MapOfferDto>();

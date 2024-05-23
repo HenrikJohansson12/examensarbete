@@ -1,9 +1,7 @@
-﻿using Database.Models;
-using Database.Models.DTO;
-
+﻿using API.Models.DTOS;
 namespace API.Responses;
 
 public class GetTop10MostDiscountedProductsResponse
 {
-    public List<ProductRecordDTO> Result { get; set; }
+    public List<ProductRecordDto> Products { get; set; }
 }

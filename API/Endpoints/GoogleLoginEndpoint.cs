@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Database.Models;
 
 public class GoogleLoginRequest
 {
@@ -14,10 +15,10 @@ public class GoogleLoginRequest
 
 public class GoogleLoginEndpoint : Endpoint<GoogleLoginRequest, GoogleLoginResponse>
 {
-    private readonly UserManager<IdentityUser> _userManager;
+    private readonly UserManager<User> _userManager;
     private readonly IConfiguration _configuration;
 
-    public GoogleLoginEndpoint(UserManager<IdentityUser> userManager, IConfiguration configuration)
+    public GoogleLoginEndpoint(UserManager<User> userManager, IConfiguration configuration)
     {
         _userManager = userManager;
         _configuration = configuration;
@@ -41,7 +42,7 @@ public class GoogleLoginEndpoint : Endpoint<GoogleLoginRequest, GoogleLoginRespo
             var user = await _userManager.FindByEmailAsync(payload.Email);
             if (user == null)
             {
-                user = new IdentityUser
+                user = new User()
                 {
                     UserName = payload.Email,
                     Email = payload.Email

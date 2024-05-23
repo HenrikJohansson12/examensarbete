@@ -3,7 +3,6 @@ using API.Mappers;
 using API.Responses;
 using Database;
 using Database.Models;
-using Database.Models.DTO;
 using Database.Models.Livsmedelsverket;
 using Microsoft.EntityFrameworkCore;
 

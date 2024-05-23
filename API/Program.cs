@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using System.Threading.Tasks;
 using API.Properties.Services;
 using API.Services;
 using Database.Models;
@@ -29,7 +28,7 @@ builder.Services.AddScoped<IIngredientService, IngredientService>();
 builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddSqlite<WebApiDbContext>(connectionString);
 
-builder.Services.AddIdentityApiEndpoints<IdentityUser>()
+builder.Services.AddIdentityApiEndpoints<User>()
     .AddEntityFrameworkStores<WebApiDbContext>();
 
 builder.Services.AddFastEndpoints();
@@ -45,7 +44,6 @@ builder.Services.AddCors(options =>
             .AllowAnyHeader();
     });
 });
-
 
 // Configure JWT authentication
 builder.Services.AddAuthentication(options =>
@@ -75,7 +73,7 @@ app.UseCors("AllowAll");
 
 app.UseAuthentication();
 app.UseAuthorization();
-app.MapIdentityApi<IdentityUser>();
+app.MapIdentityApi<User>();
 app.UseFastEndpoints();
 app.UseSwaggerGen();
 
@@ -85,7 +83,3 @@ app.UseSwaggerGen();
     .EnsureCreatedAsync();
 */
 app.Run();
-
-
-
-

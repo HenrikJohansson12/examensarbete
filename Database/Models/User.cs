@@ -1,10 +1,10 @@
-﻿namespace Database.Models;
+﻿using Microsoft.AspNetCore.Identity;
 
-public class User
+namespace Database.Models;
+
+public class User: IdentityUser
 {
-    public int Id { get; set; }
-    public string EmailAddress { get; set; }
-    public string Password { get; set; }
-    public string DisplayName { get; set; }
+    public  string? DisplayName { get; set; }
+    public  string? ZipCode { get; set; }
 
 }

@@ -1,13 +1,12 @@
-﻿using Database.Models;
-using Database.Models.DTO;
-
+﻿using API.Models.DTOS;
+using Database.Models;
 namespace API.Mappers;
 
 public class ProductRecordToDTO
 {
-    public static ProductRecordDTO To(ProductRecord productRecord)
+    public static ProductRecordDto To(ProductRecord productRecord)
     {
-        var dto = new ProductRecordDTO()
+        var dto = new ProductRecordDto()
         {
             Id = productRecord.Id,
             Brand = productRecord.Brand,

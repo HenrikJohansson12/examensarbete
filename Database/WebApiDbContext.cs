@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Database;
 
-public class WebApiDbContext : IdentityDbContext<IdentityUser>
+public class WebApiDbContext : IdentityDbContext<User>
 {
     public WebApiDbContext(DbContextOptions<WebApiDbContext> options)
         : base(options)
