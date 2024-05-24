@@ -4,7 +4,7 @@ using System.Text.Json;
 using Database;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
-
+using API;
 namespace BackEndTests.Ingredients;
 using Database.Models.Livsmedelsverket;
 public class IngredientsTest
@@ -47,7 +47,7 @@ public class IngredientsTest
     //Use this test to seed the ingredients to the DB. 
     public async void Can_Save_Ingredient_To_Db()
     {
-        var factory = new WebApiDbContextFactory();
+        var factory = new DesignTimeDbContextFactory();
         var dbContext = factory.CreateDbContext(new string[] { });
 
         var httpClient = new HttpClient();
@@ -77,6 +77,6 @@ public class IngredientsTest
 
         await dbContext.Ingredients.AddRangeAsync(listOfIngredients);
       await  dbContext.SaveChangesAsync();
-      
+  
     }
 }

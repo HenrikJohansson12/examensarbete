@@ -13,6 +13,9 @@ public class WebApiDbContext : IdentityDbContext<User>
         : base(options)
     {
     }
+    public WebApiDbContext()
+    {
+    }
  public DbSet<ProductRecord> ProductRecords { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<Store> Stores { get; set; }

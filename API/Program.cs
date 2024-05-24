@@ -1,19 +1,19 @@
 global using FastEndpoints;
 using Database;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using API.Properties.Services;
 using API.Services;
 using Database.Models;
 using FastEndpoints.Swagger;
-using Google.Apis.Auth;
+
+var config = new ConfigurationBuilder()
+    .AddUserSecrets<Program>()
+    .Build();
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("Pizzas") ?? "Data Source=C:\\dev\\Examensarbete\\Database\\WebApiDatabaseTest.db";
+
 var configuration = builder.Configuration;
 
 // Add services to the container.
@@ -26,7 +26,7 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IIngredientService, IngredientService>();
 builder.Services.AddSingleton<HttpClient>();
-builder.Services.AddSqlite<WebApiDbContext>(connectionString);
+builder.Services.AddSqlServer<WebApiDbContext>(config.GetConnectionString("azure"));
 
 builder.Services.AddIdentityApiEndpoints<User>()
     .AddEntityFrameworkStores<WebApiDbContext>();
