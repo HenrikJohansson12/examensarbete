@@ -3,8 +3,14 @@ import { IngredientDto } from "./Ingredient";
 import { MappedOffer } from "./MapOfferDTO";
 
 // data.ts
-export const fetchIngredients = async (query: string): Promise<IngredientDto[]> => {
-    const response = await fetch(`https://localhost:7027/api/searchIngredients?searchWord=${query}`);
+export const fetchIngredients = async (query: string, token : string): Promise<IngredientDto[]> => {
+    const response = await fetch(`https://localhost:7027/api/searchIngredients?searchWord=${query}`,{
+        method: "GET",
+        headers:{
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },    
+    });
     const data = await response.json();
     return data.ingredients.map((item: IngredientDto) => ({
         id: item.id,
@@ -13,8 +19,14 @@ export const fetchIngredients = async (query: string): Promise<IngredientDto[]> 
     }));
 };
 
-export const fetchUnmappedOffers = async (): Promise<MappedOffer[]> => {
-    const response = await fetch(`https://localhost:7027/api/getunmappedoffers`);
+export const fetchUnmappedOffers = async (token: string): Promise<MappedOffer[]> => {
+    const response = await fetch(`https://localhost:7027/api/getunmappedoffers`,{
+        method: "GET",
+        headers:{
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },    
+    });
     const data = await response.json();
     return data.offers.map((item: any) => ({
         id: item.id,
@@ -26,8 +38,15 @@ export const fetchUnmappedOffers = async (): Promise<MappedOffer[]> => {
     }));
 };
 
-export const fetchCategories = async (): Promise<Category[]> => {
-    const response = await fetch(`https://localhost:7027/api/getcategories`);
+export const fetchCategories = async (token: string): Promise<Category[]> => {
+    const response = await fetch(`https://localhost:7027/api/getcategories`,
+    {
+        method: "GET",
+        headers:{
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },    
+    });
     const data = await response.json();
     return data.categories.map((item: any) => ({
         Id: item.id,

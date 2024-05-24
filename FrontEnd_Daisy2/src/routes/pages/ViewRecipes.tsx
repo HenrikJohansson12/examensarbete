@@ -1,5 +1,5 @@
 import React from "react";
-import { productRecords } from "../../data/testData";
+//import { productRecords } from "../../data/testData";
 import { useNavigate } from "react-router-dom";
 
 export default function ViewRecipes() {
@@ -7,7 +7,7 @@ export default function ViewRecipes() {
    const addRecipeButtonClicked = () =>{
         navigate("new");
     }
-  return (
+  return (/*
     <div className="flex flex-col flex-1 relative">
       <div className="flex flex-col items-center">
         <h1 className="text-center text-3xl mb-4">
@@ -63,5 +63,6 @@ export default function ViewRecipes() {
         </svg>
       </button>
     </div>
-  );
+    */
+ <div>Apa</div> );
 }

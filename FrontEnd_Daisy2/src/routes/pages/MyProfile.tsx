@@ -30,10 +30,8 @@ export default function MyProfile() {
         throw new Error('Failed to update profile');
       }
 
-      // Hantera svaret här om nödvändigt
     } catch (error) {
       console.error('Error updating profile:', error);
-      // Hantera fel här om nödvändigt
     }
   };
 

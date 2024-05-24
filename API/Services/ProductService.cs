@@ -22,9 +22,32 @@ public class ProductService:IProductService
         _dbContext = dbContext;
     }
 
-    public Task<List<ProductRecordDto>> GetTopTenOffers()
+    public async Task<List<ProductRecordDto>> GetTopTenOffers()
     {
-        throw new NotImplementedException();
+        //todo Include the favorite stores in the query. 
+
+       var today = DateOnly.FromDateTime(DateTime.Now);
+
+       var productRecords = await _dbContext.ProductRecords
+           .Where(pr => pr.StartDate <= today && pr.EndDate >= today && pr.IsReviewed == true)
+           .Include(pr => pr.Store)
+           .Include(pr => pr.Category)
+           .Select(pr => new
+           {
+               Product = pr,
+               DiscountPercentage = (double)((pr.Price - pr.DiscountedPrice) / pr.Price * 100)
+           })
+           .OrderByDescending(pr => pr.DiscountPercentage).Take(10)
+           .Select(pr => pr.Product).ToListAsync();
+       
+        var productRecordList = new List<ProductRecordDto> ();
+
+        for (int i = 0; i < productRecords.Count; i++)
+        {
+            productRecordList.Add(ProductRecordToDTO.To(productRecords[i]));
+        }
+        
+        return productRecordList;
     }
 
     public async Task<List<MapOfferDto>>GetUnmappedOffers() 

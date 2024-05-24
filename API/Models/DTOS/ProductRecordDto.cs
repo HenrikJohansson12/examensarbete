@@ -16,6 +16,7 @@ public class ProductRecordDto
         public bool IsMemberOffer { get; set; }
         public string StoreName { get; set; }
         public string Category { get; set; }
-        //  public Store Store { get; set; }
+        public double DiscountPercent { get; set; }
+        
     
 }

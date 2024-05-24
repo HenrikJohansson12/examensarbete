@@ -19,7 +19,6 @@ public class GetIngredientsTest: EndpointWithoutRequest<TestResponse>
     public override void Configure()
     {
         Get("/api/ingredients");
-        AllowAnonymous();
     }
 
     public override async Task HandleAsync( CancellationToken ct)

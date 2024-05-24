@@ -16,7 +16,6 @@ public class GetCategoriesEndpoint : EndpointWithoutRequest<GetCategoriesRespons
     public override void Configure()
     {
         Get("/api/getcategories");
-          AllowAnonymous();
     }
 
     public override async Task HandleAsync(CancellationToken ct)

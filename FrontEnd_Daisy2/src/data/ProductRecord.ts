@@ -1,16 +1,17 @@
-export default interface ProductRecord{
-    Id: number;
-    CountryOfOrigin: string;
-    OfferType: string;
-    Name: string;
-    Brand: string;
-    Description: string;
-    Price: number;
-    DiscountedPrice: number;
-    Size: string;
-    MinItems: number;
-    MaxItems: number;
-    IsMemberOffer: boolean; 
-
+export default interface ProductRecord {
+    id: number;
+    countryOfOrigin: string;
+    offerType: string;
+    name: string;
+    brand: string;
+    description: string;
+    price: number;
+    discountedPrice: number;
+    size: string;
+    minItems: number;
+    maxItems: number;
+    isMemberOffer: boolean;
+    storeName: string;
+    category: string;
+    discountPercent: number;
 }
-

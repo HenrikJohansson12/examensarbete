@@ -7,8 +7,12 @@ import {
 } from "../../data/FetchIngredients";
 import Category from "../../data/Category";
 import { IngredientDto } from "../../data/Ingredient";
+import { RootState } from "../../redux/store";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function MappedOfferList() {
+  const navigate = useNavigate()
   const [mappedOffers, setMappedOffers] = useState<MappedOffer[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -16,14 +20,18 @@ export default function MappedOfferList() {
   const [ingredientQuery, setIngredientQuery] = useState<string>('');
   const [ingredientResults, setIngredientResults] = useState<IngredientDto[]>([]);
   const [activeOfferId, setActiveOfferId] = useState<number | null>(null);
+  const aspNetToken = useSelector((state: RootState) => state.auth.aspNetToken);
 
   useEffect(() => {
+    if (!aspNetToken) {
+      navigate("/login");
+    }
     const loadMappedOffers = async () => {
       try {
         setLoading(true);
-        const offers = await fetchUnmappedOffers();
+        const offers = await fetchUnmappedOffers(aspNetToken);
         setMappedOffers(offers);
-        const fetchedCategories = await fetchCategories();
+        const fetchedCategories = await fetchCategories(aspNetToken);
         setCategories(fetchedCategories);
       } catch (error) {
         setError("Failed to fetch offers");

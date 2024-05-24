@@ -16,12 +16,12 @@ public class GetTop10MostDiscountedProducts: EndpointWithoutRequest<GetTop10Most
     }
     public override void Configure()
     {
-        Get("/api/test");
+        Get("/api/toptendiscountedproducts");
     }
 
     public override async Task HandleAsync( CancellationToken ct)
     {
-        
+       Response.Products = await  _productService.GetTopTenOffers();
 
     
         await SendAsync(Response);

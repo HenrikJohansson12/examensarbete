@@ -19,7 +19,11 @@ public class ProductRecordToDTO
             Size = productRecord.Quantity + " " + productRecord.QuantityUnit,
             MinItems = productRecord.MinItems,
             MaxItems = productRecord.MaxItems,
-            IsMemberOffer = productRecord.IsMemberOffer
+            IsMemberOffer = productRecord.IsMemberOffer,
+            StoreName = productRecord.Store.Name,
+            DiscountPercent =(double) ((productRecord.Price - productRecord.DiscountedPrice) / productRecord.Price)*100,
+            Category = productRecord.Category.Name
+            
         };
         return dto;
     }
