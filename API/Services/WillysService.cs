@@ -1,11 +1,7 @@
-using System.Globalization;
 using System.Text.Json;
-using System.Text.RegularExpressions;
 using API.Mappers;
-using API.Models;
 using API.Requests;
 using Database;
-using Database.Models;
 
 namespace API.Properties.Services;
 
@@ -16,16 +12,11 @@ public interface IWillysService
 public class WillysService : IWillysService
 {
     private readonly HttpClient _httpClient;
-    private List<ProductRecord> _productRecords = new ();
     private WebApiDbContext _webApiDbContext;
     public WillysService(HttpClient httpClient, WebApiDbContext webApiDbContext)
     {
         _httpClient = httpClient;
         _webApiDbContext = webApiDbContext;
-    }
-    public List<ProductRecord> GetProductRecords()
-    {
-        return _productRecords;
     }
     public async Task<bool> GetDiscountedProducts(GetDiscountedItemsWillysRequest req)
     {
@@ -48,26 +39,21 @@ public class WillysService : IWillysService
             WillysRoot? willysRoot = JsonSerializer.Deserialize<WillysRoot>(apiResponse);
             if (willysRoot.results.Count == willysRoot.pagination.pageSize)
             {
-                Console.WriteLine("Alla produkter är INTE med");
+              //All products are not included
                 return false;
             }
-        
         productList.AddRange(willysRoot.results);
             
         foreach (var product in productList)
         {
            var productRecord = WillysToProductRecordMapper.Map(product);
            productRecord.Store = store;
-           _productRecords.Add(productRecord);
            _webApiDbContext.ProductRecords.Add(productRecord);
-           
         }
-    
     await _webApiDbContext.SaveChangesAsync();
         return true;
     }
-
-   
+    
 }
 
 

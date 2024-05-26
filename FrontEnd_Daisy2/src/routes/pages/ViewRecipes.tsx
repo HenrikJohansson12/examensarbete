@@ -64,5 +64,9 @@ export default function ViewRecipes() {
       </button>
     </div>
     */
- <div>Apa</div> );
+ <div>Apa
+  <button onClick={addRecipeButtonClicked}>
+    Apa
+  </button>
+ </div> );
 }

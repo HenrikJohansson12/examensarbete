@@ -7,6 +7,7 @@ using API.Properties.Services;
 using API.Services;
 using Database.Models;
 using FastEndpoints.Swagger;
+using Microsoft.AspNetCore.Identity;
 
 var config = new ConfigurationBuilder()
     .AddUserSecrets<Program>()
@@ -25,11 +26,13 @@ builder.Services.AddScoped<IRecipeService, RecipeService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IIngredientService, IngredientService>();
+builder.Services.AddTransient<IAuthService, AuthService>();
 builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddSqlServer<WebApiDbContext>(config.GetConnectionString("azure"));
 
 builder.Services.AddIdentityApiEndpoints<User>()
-    .AddEntityFrameworkStores<WebApiDbContext>();
+    .AddEntityFrameworkStores<WebApiDbContext>()
+    .AddDefaultTokenProviders();
 
 builder.Services.AddFastEndpoints();
 builder.Services.SwaggerDocument(); // Add Swagger
@@ -45,26 +48,25 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Configure JWT authentication
 builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
     {
-        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
+        options.TokenValidationParameters = new TokenValidationParameters()
         {
+            ValidateActor = true,
             ValidateIssuer = true,
             ValidateAudience = true,
-            ValidateLifetime = true,
+            RequireExpirationTime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = configuration["Jwt:Issuer"],
-            ValidAudience = configuration["Jwt:Audience"],
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"]))
+            ValidIssuer = config.GetSection("Jwt:Issuer").Value,
+            ValidAudience = config.GetSection("Jwt:Audience").Value,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.GetSection("Jwt:Key").Value))
         };
-    });
-
+    }
+);
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
@@ -77,9 +79,4 @@ app.MapIdentityApi<User>();
 app.UseFastEndpoints();
 app.UseSwaggerGen();
 
-/*await app.Services
-    .CreateScope().ServiceProvider.GetRequiredService<WebApiDbContext>()
-    .Database
-    .EnsureCreatedAsync();
-*/
 app.Run();

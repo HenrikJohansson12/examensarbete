@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MappedOffer, PostMappedOffer, mapToPostMappedOffer } from "../../data/MapOfferDTO";
 import {
   fetchCategories,
@@ -23,10 +23,11 @@ export default function MappedOfferList() {
   const aspNetToken = useSelector((state: RootState) => state.auth.aspNetToken);
 
   useEffect(() => {
-    if (!aspNetToken) {
+    if (!aspNetToken === null) {
       navigate("/login");
     }
     const loadMappedOffers = async () => {
+      if(aspNetToken != null)
       try {
         setLoading(true);
         const offers = await fetchUnmappedOffers(aspNetToken);
@@ -41,7 +42,7 @@ export default function MappedOfferList() {
     };
 
     loadMappedOffers();
-  }, []); // Tom array betyder att effekten bara körs när komponenten laddas första gången
+  },); 
 
   const handleSave = async () => {
     try {
@@ -67,7 +68,7 @@ export default function MappedOfferList() {
 
   const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>, offerId: number) => {
     const selectedCategoryId = parseInt(event.target.value);
-    const selectedCategory = categories.find(category => category.Id === selectedCategoryId);
+    const selectedCategory = categories.find(category => category.id === selectedCategoryId);
 
     setMappedOffers((prevOffers) =>
       prevOffers.map((offer) =>
@@ -80,7 +81,7 @@ export default function MappedOfferList() {
     setIngredientQuery(query);
     setActiveOfferId(offerId);
     if (query.length > 2) {
-      const results = await fetchIngredients(query);
+      const results = await fetchIngredients(query, aspNetToken);
       setIngredientResults(results);
     } else {
       setIngredientResults([]);
@@ -134,14 +135,14 @@ export default function MappedOfferList() {
             <select
               name="CategoryId"
               id={`CategoryId-${offer.id}`}
-              value={offer.Category?.Id || ""}
+              value={offer.Category?.id || ""}
               onChange={(e) => handleCategoryChange(e, offer.id)}
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
             >
               <option value="">Select a category</option>
               {categories.map((category) => (
-                <option key={category.Id} value={category.Id}>
-                  {category.Name}
+                <option key={category.id} value={category.id}>
+                  {category.name}
                 </option>
               ))}
             </select>

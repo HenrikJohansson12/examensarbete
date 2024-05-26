@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { RootState } from "../../redux/store"; // Justera sökvägen till din store-fil
+import { RootState } from "../../redux/store"; 
 
 export default function MyProfile() {
   const [zipcode, setZipcode] = useState<string>("");

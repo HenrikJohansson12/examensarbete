@@ -1,15 +1,9 @@
-using System.Data.SqlTypes;
-using System.Globalization;
 using API.Models;
 using System.Text.Json;
-using System.Text.RegularExpressions;
 using API.Mappers;
 using API.Requests;
-using Castle.Components.DictionaryAdapter.Xml;
 using Database;
 using Database.Models;
-using Microsoft.AspNetCore.Mvc.ModelBinding.Binders;
-using Newtonsoft.Json.Linq;
 
 namespace API.Properties.Services;
 
@@ -49,17 +43,14 @@ public class IcaService : IIcaService
         {
             return false;
         }
-
         var icaRoot = JsonSerializer.Deserialize<IcaRoot>(await result.Content.ReadAsStringAsync());
         if (icaRoot is null)
         {
             return false;
         }
-
-
+        
         var productIds = new List<string>();
-        //Hämtar ut alla  som har on offer typen. 
-        //När den inte har on offer type så finns ingen prishistorik med. 
+        //Only select the ones that are on offer. If its not on offer the previous price is not included. 
         foreach (var types in icaRoot.result.productGroups)
         {
             if (types.type == "on_offer")
@@ -67,14 +58,13 @@ public class IcaService : IIcaService
                 productIds.AddRange(types.products);
             }
         }
-
         //Split the list of product Id's since the endpoint allows a few at the time.  
         List<List<string>> dividedLists = new List<List<string>>();
         foreach (string[] chunk in productIds.Chunk(10))
         {
             dividedLists.Add(chunk.ToList());
         }
-
+        
         string decorateProductIds = "";
         for (int i = 0; i < dividedLists.Count; i++)
         {
@@ -84,13 +74,11 @@ public class IcaService : IIcaService
                 {
                     decorateProductIds = dividedLists[i][j] + ",";
                 }
-
                 else
                 {
                     decorateProductIds = decorateProductIds + dividedLists[i][j] + ",";
                 }
             }
-
             var productResponse = await _httpClient.GetStringAsync(
                 $"https://handlaprivatkund.ica.se/stores/{req.StoreId}/api/v5/products/decorate?productIds=" +
                 decorateProductIds);

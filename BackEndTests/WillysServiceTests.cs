@@ -8,6 +8,7 @@ using Database;
 using Database.Models;
 using Microsoft.EntityFrameworkCore;
 using Moq;
+using Xunit.Sdk;
 
 namespace BackEndTests;
 using System.IO;
@@ -21,7 +22,6 @@ public class WillysServiceTest
         {
             _code = code;
         }
-        
         public HttpMessageHandlerMock(HttpResponseMessage response)
         {
             _response = response;
@@ -31,7 +31,6 @@ public class WillysServiceTest
             if (_response!= null)
             {
                 return Task.FromResult(_response);
-
             }
             return Task.FromResult(new HttpResponseMessage()
             {
@@ -39,25 +38,29 @@ public class WillysServiceTest
             });
         }
     }
-    [Fact] 
+    [Fact]  
     public async void WillysJsonIsConvertedCorrectly()
     {
-        string jsonContent = File.ReadAllText("willysresponse.json");
-        
-        var req = new GetDiscountedItemsWillysRequest
-        {
-            StoreId = "123"
-        };
+        var jsonContent = File.ReadAllText("willysresponse.json");
         var http = new HttpClient( new HttpMessageHandlerMock(new HttpResponseMessage()
         {
             StatusCode = HttpStatusCode.OK,
             Content = new StringContent(jsonContent)
         }));
         
-        var service = new WillysService(http, new WebApiDbContext(new DbContextOptions<WebApiDbContext>()));
+        var req = new GetDiscountedItemsWillysRequest
+        {
+            StoreId = "123"
+        };
+        var options = new DbContextOptionsBuilder<WebApiDbContext>()
+            .UseInMemoryDatabase(databaseName: "TestDatabase")
+            .Options;
+        var dbContext = new WebApiDbContext(options);
+         
+        var service = new WillysService(http,dbContext );
     await service.GetDiscountedProducts(req);
 
-      var result = service.GetProductRecords();
+    var result = await  dbContext.ProductRecords.ToListAsync();
 
       var perKiloGramOffer = new ProductRecord()
       {
@@ -145,17 +148,20 @@ public class WillysServiceTest
   
 
 
-[Fact]
+[Fact] 
 public async void Convert_Willys_Data_To_Csv()
 {
     var httpClient = new HttpClient();
-    var dbContext = new WebApiDbContext(new DbContextOptions<WebApiDbContext>());
+    var options = new DbContextOptionsBuilder<WebApiDbContext>()
+        .UseInMemoryDatabase(databaseName: "TestDatabase")
+        .Options;
+    var dbContext = new WebApiDbContext(options);
     var willysService = new WillysService(httpClient,dbContext);
     var req = new GetDiscountedItemsWillysRequest(){StoreId = "2110"};
 
     await willysService.GetDiscountedProducts(req);
 
-    var result = willysService.GetProductRecords();
+    var result =  await dbContext.ProductRecords.ToListAsync();
  
     using (var writer = new StreamWriter(@"C:\dev\examensarbete\exports\willystest17.csv", false,
                Encoding.UTF32))

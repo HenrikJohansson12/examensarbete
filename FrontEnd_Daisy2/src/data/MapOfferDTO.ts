@@ -24,7 +24,7 @@ export interface PostMappedOffer{
 export const mapToPostMappedOffer = (mappedOffer: MappedOffer): PostMappedOffer => {
     return {
         ProductRecordId: mappedOffer.id,
-        CategoryId: mappedOffer.Category?.Id ? mappedOffer.Category.Id : 0, // eller en lämplig standardvärde
+        CategoryId: mappedOffer.Category?.id ? mappedOffer.Category.id : 0, // eller en lämplig standardvärde
         IngredientId: mappedOffer.Ingredient?.id ? mappedOffer.Ingredient.id : 0 // eller en lämplig standardvärde
     };
 }

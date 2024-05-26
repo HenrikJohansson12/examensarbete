@@ -4,14 +4,14 @@ import { MappedOffer } from "./MapOfferDTO";
 
 // data.ts
 export const fetchIngredients = async (query: string, token : string): Promise<IngredientDto[]> => {
-    const response = await fetch(`https://localhost:7027/api/searchIngredients?searchWord=${query}`,{
+    const response = await fetch(`https://localhost:7027/api/searchIngredients?searchWord=${query}`, {
         method: "GET",
-        headers:{
-          'Content-Type': 'application/json',
+        headers: {
           'Authorization': `Bearer ${token}`,
-        },    
-    });
+        },
+      });
     const data = await response.json();
+    console.log(query)
     return data.ingredients.map((item: IngredientDto) => ({
         id: item.id,
         slvIngredientId: item.slvIngredientId,
@@ -28,7 +28,7 @@ export const fetchUnmappedOffers = async (token: string): Promise<MappedOffer[]>
         },    
     });
     const data = await response.json();
-    return data.offers.map((item: any) => ({
+    return data.offers.map((item: MappedOffer) => ({
         id: item.id,
         name: item.name,
         brand: item.brand,
@@ -48,7 +48,7 @@ export const fetchCategories = async (token: string): Promise<Category[]> => {
         },    
     });
     const data = await response.json();
-    return data.categories.map((item: any) => ({
+    return data.categories.map((item: Category) => ({
         Id: item.id,
         Name: item.name,
     }));

@@ -1,8 +1,6 @@
 ﻿using API.Requests;
 using API.Responses;
 using API.Services;
-using Microsoft.IdentityModel.Tokens;
-
 namespace API.Endpoints;
 
 public class SearchIngredientsEndpoint:Endpoint<SearchIngredientRequest, SearchIngredientResponse>
@@ -17,14 +15,13 @@ public class SearchIngredientsEndpoint:Endpoint<SearchIngredientRequest, SearchI
     public override void Configure()
     {
         Get("/api/searchIngredients");
-        AllowAnonymous();
     }
 
     public override async Task HandleAsync(SearchIngredientRequest req, CancellationToken ct)
     {
         if (String.IsNullOrWhiteSpace(req.SearchWord))
         {
-            await SendNoContentAsync(cancellation: ct);
+            await  SendErrorsAsync(400,cancellation: ct);
         }
         else
         {

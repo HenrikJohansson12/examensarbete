@@ -3,6 +3,8 @@ import { RecipeContext } from "../../contexts/RecipeContext";
 import AddIngredients from "../../components/AddIngredients";
 import IngredientsList from "../../components/IngredientsList";
 import RecipeCard from "../../components/RecipeCard";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 export default function CreateRecipe() {
   const context = useContext(RecipeContext);
@@ -10,7 +12,7 @@ export default function CreateRecipe() {
   if (!context) {
     throw new Error("RecipeComponent must be used within a RecipeProvider");
   }
-
+  const aspNetToken = useSelector((state: RootState) => state.auth.aspNetToken);
   const {
     recipe,
     updateName,
@@ -21,12 +23,13 @@ export default function CreateRecipe() {
   } = context;
 
   const handleSave = async () => {
-    try {
-      console.log(recipe);
-      const response = await fetch("http://localhost:5290/api/saverecipe", {
+    if (aspNetToken != null){
+    try {   
+      const response = await fetch("http://localhost:7027/api/saverecipe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          'Authorization': `Bearer ${aspNetToken}`,
         },
         body: JSON.stringify(recipe),
       });
@@ -39,6 +42,7 @@ export default function CreateRecipe() {
       console.error("Error saving recipe:", error);
       alert("An error occurred while saving the recipe.");
     }
+}
   };
 
   return (
@@ -104,13 +108,23 @@ export default function CreateRecipe() {
       <div className="flex flex-col items-center space-y-4">
         <button
           className="btn btn-primary w-full max-w-xs"
-          onClick={() => document.getElementById("my_modal_2").showModal()}
+          onClick={() => {
+            const modal = document.getElementById("my_modal_2") as HTMLDialogElement | null;
+            if (modal) {
+              modal.showModal();
+            }
+          }}
         >
           Lägg till ingredienser
         </button>
         <button
           className="btn btn-primary w-full max-w-xs"
-          onClick={() => document.getElementById("my_modal_3").showModal()}
+          onClick={() => {
+            const modal = document.getElementById("my_modal_3") as HTMLDialogElement | null;
+            if (modal) {
+              modal.showModal();
+            }
+          }}
         >
           Lägg till instruktioner
         </button>
@@ -157,7 +171,12 @@ export default function CreateRecipe() {
       <div>
         <button
           className="btn btn-primary w-full max-w-xs"
-          onClick={() => document.getElementById("my_modal_4").showModal()}
+          onClick={() => {
+            const modal = document.getElementById("my_modal_4") as HTMLDialogElement | null;
+            if (modal) {
+              modal.showModal();
+            }
+          }}
         >
           Förhandsgranska
         </button>

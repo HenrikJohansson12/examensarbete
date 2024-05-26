@@ -1,4 +1,3 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import { GoogleLogin } from "@react-oauth/google";
 import { fetchBearerTokenWithGoogle } from "../api/login";
@@ -26,6 +25,7 @@ export default function SignInWithGoogleComponent (){
 return(<div>
          <GoogleLogin
             onSuccess={(credentialResponse) => {
+                console.log(credentialResponse)
               signUpWithGoogle(credentialResponse.credential)
             }}
             onError={() => {

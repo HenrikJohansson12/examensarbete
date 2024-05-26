@@ -1,9 +1,10 @@
-import { useContext, useState } from "react";
-import React from "react";
+import { useContext, useState, useEffect } from "react";
 import { fetchIngredients } from "../data/FetchIngredients";
-import  { IngredientDto } from "../data/Ingredient";
+import { IngredientDto } from "../data/Ingredient";
 import IngredientToRecipe from "../data/IngredientToRecipe";
 import { RecipeContext } from "../contexts/RecipeContext";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
 
 export default function AddIngredients() {
   const context = useContext(RecipeContext);
@@ -11,11 +12,10 @@ export default function AddIngredients() {
   if (!context) {
     throw new Error("AddIngredients must be used within a RecipeProvider");
   }
-
+  const aspNetToken = useSelector((state: RootState) => state.auth.aspNetToken);
   const { addIngredient } = context;
   const [ingredientQuery, setIngredientQuery] = useState<string>('');
   const [ingredientResults, setIngredientResults] = useState<IngredientDto[]>([]);
-  const [selectedIngredients, setSelectedIngredients] = useState<IngredientToRecipe[]>([]);
   const [amounts, setAmounts] = useState<{ [key: number]: number }>({});
   const [units, setUnits] = useState<{ [key: number]: string }>({});
 
@@ -25,22 +25,26 @@ export default function AddIngredients() {
       Amount: amounts[index] || 0,
       Unit: units[index] || "g",
     };
-    setSelectedIngredients((prevIngredients) => [
-      ...prevIngredients,
-      ingredientToRecipe,
-    ]);
+
     addIngredient(ingredientToRecipe);
     console.log(ingredientToRecipe);
   };
 
-  const handleIngredientSearch = async (query: string) => {
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(async () => {
+      if (ingredientQuery.length > 3 && aspNetToken) {
+        const results = await fetchIngredients(ingredientQuery, aspNetToken);
+        setIngredientResults(results);
+      } else {
+        setIngredientResults([]);
+      }
+    }, 500); // 500ms debounce
+
+    return () => clearTimeout(delayDebounceFn);
+  }, [ingredientQuery, aspNetToken]);
+
+  const handleIngredientSearch = (query: string) => {
     setIngredientQuery(query);
-    if (query.length > 2) {
-      const results = await fetchIngredients(query);
-      setIngredientResults(results);
-    } else {
-      setIngredientResults([]);
-    }
   };
 
   const handleAmountInputChange = (index: number, value: number) => {

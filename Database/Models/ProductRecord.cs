@@ -28,7 +28,4 @@ public class ProductRecord
     public Category? Category { get; set; }
     public bool? IsReviewed { get; set; }
     
-
-    
-    //Hade varit nice att hämta bilden och spara nånstans?
 }

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/studentmatlogo.webp";
 import { loginWithEmailAndPassword } from "../../api/login";
 import { useDispatch } from "react-redux";
@@ -14,7 +14,7 @@ export default function LoginPage() {
   const dispatch = useDispatch();
 
   const registerButtonClicked = () => {
-    navigate('/offers');
+    navigate('/signup');
   };
 
   const signInWithUserNameAndPassword = async () => {

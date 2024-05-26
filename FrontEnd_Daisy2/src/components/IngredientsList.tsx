@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { RecipeContext } from "../contexts/RecipeContext";
 import IngredientToRecipe from "../data/IngredientToRecipe";
 
 export default function IngredientsList() {
   const context = useContext(RecipeContext);
+
+  if (!context) {
+    throw new Error("AddIngredients must be used within a RecipeProvider");
+  }
   const { recipe, removeIngredient } = context;
 
   const deleteIngredient = (ingredient: IngredientToRecipe) =>{
@@ -14,8 +18,8 @@ export default function IngredientsList() {
     <div className="overflow-x-auto">
 
       <ul className="list-disc list-inside">
-        {recipe?.Ingredients.map((ingredient) => (
-          <li key={ingredient.Ingredient.Id} className="my-2">
+        {recipe?.Ingredients.map((ingredient: IngredientToRecipe) => (
+          <li key={ingredient.Ingredient.id} className="my-2">
             {ingredient.Ingredient.name} {ingredient.Amount}
             {ingredient.Unit}
             <button className="btn btn-square"

@@ -94,9 +94,7 @@ public class WebApiDbContext : IdentityDbContext<User>
             new Category() { Id = 21, Name = "Snacks och godis" },
             new Category() { Id = 22, Name = "Vegetariskt" },
             new Category() { Id = 23, Name = "Övrigt" },
-            
         };
-
         modelBuilder.Entity<Brand>().HasData(new List<Brand> { brand1, brand2 });
         modelBuilder.Entity<Store>().HasData(new List<Store> { store1, store2 });
         modelBuilder.Entity<Category>().HasData(categories);
