@@ -14,7 +14,6 @@ public class UpdateOffersEndpoint: Endpoint<UpdateOfferRequest>
     public override void Configure()
     {
         Post("/api/updateOffers");
-        AllowAnonymous();
     }
     public override async Task HandleAsync(UpdateOfferRequest req, CancellationToken ct)
     {

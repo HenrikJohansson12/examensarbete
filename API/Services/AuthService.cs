@@ -1,6 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using API.Requests;
 using Database.Models;
 using Google.Apis.Auth;
 using Microsoft.AspNetCore.Identity;
@@ -11,8 +12,8 @@ namespace API.Services;
 
 public interface IAuthService
 {
-      Task<string> Login(LoginRequest req);
-      Task<string> LoginWithGoogle(GoogleLoginRequest req);
+      Task<string?> Login(LoginRequest req);
+      Task<string?> LoginWithGoogle(GoogleLoginRequest req);
     
 }
 
@@ -43,7 +44,7 @@ public class AuthService: IAuthService
             return GenerateJwtToken(identityUser);
       }
 
-      public async Task<string> LoginWithGoogle(GoogleLoginRequest req)
+      public async Task<string?> LoginWithGoogle(GoogleLoginRequest req)
       {
             try
             {
@@ -71,7 +72,13 @@ public class AuthService: IAuthService
                   var token = GenerateJwtToken(user);
                   return token;
             }
-            catch 
+            catch (InvalidJwtException e)
+            {
+                  Console.WriteLine(e);
+                  return null;
+            }
+
+                  
 }
 
       

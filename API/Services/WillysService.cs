@@ -48,6 +48,7 @@ public class WillysService : IWillysService
         {
            var productRecord = WillysToProductRecordMapper.Map(product);
            productRecord.Store = store;
+           productRecord.IsReviewed = false;
            _webApiDbContext.ProductRecords.Add(productRecord);
         }
     await _webApiDbContext.SaveChangesAsync();

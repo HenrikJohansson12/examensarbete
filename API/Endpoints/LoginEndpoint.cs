@@ -28,7 +28,7 @@ public class LoginEndpoint: Endpoint<LoginRequest, LoginResponse>
             await SendUnauthorizedAsync(ct);
         }
 
-        Response.Token = token;
+        Response.AccessToken = token;
         await SendOkAsync(Response);
     }
 

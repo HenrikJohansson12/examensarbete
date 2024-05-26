@@ -32,7 +32,7 @@ export const fetchBearerTokenWithGoogle = async (credential: string): Promise<st
 
 export const loginWithEmailAndPassword = async (email: string, password: string): Promise<AuthResponse | undefined> => {
   try {
-    const response = await fetch('https://localhost:7027/login', {
+    const response = await fetch('https://localhost:7027/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

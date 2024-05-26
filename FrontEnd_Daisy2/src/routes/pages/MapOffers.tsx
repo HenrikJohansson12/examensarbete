@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MappedOffer, PostMappedOffer, mapToPostMappedOffer } from "../../data/MapOfferDTO";
 import {
   fetchCategories,
@@ -12,46 +12,50 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 export default function MappedOfferList() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [mappedOffers, setMappedOffers] = useState<MappedOffer[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [ingredientQuery, setIngredientQuery] = useState<string>('');
+  const [ingredientQueries, setIngredientQueries] = useState<{ [key: number]: string }>({});
   const [ingredientResults, setIngredientResults] = useState<IngredientDto[]>([]);
   const [activeOfferId, setActiveOfferId] = useState<number | null>(null);
   const aspNetToken = useSelector((state: RootState) => state.auth.aspNetToken);
 
-  useEffect(() => {
-    if (!aspNetToken === null) {
-      navigate("/login");
-    }
-    const loadMappedOffers = async () => {
-      if(aspNetToken != null)
-      try {
-        setLoading(true);
-        const offers = await fetchUnmappedOffers(aspNetToken);
-        setMappedOffers(offers);
-        const fetchedCategories = await fetchCategories(aspNetToken);
-        setCategories(fetchedCategories);
-      } catch (error) {
-        setError("Failed to fetch offers");
-      } finally {
-        setLoading(false);
-      }
-    };
+  // Ref to store timeout ID for debouncing
+  const debounceTimeout = useRef<{ [key: number]: NodeJS.Timeout }>({});
 
-    loadMappedOffers();
-  },); 
+  useEffect(() => {
+    if (aspNetToken === null) {
+      navigate("/login");
+    } else {
+      const loadMappedOffers = async () => {
+        try {
+          setLoading(true);
+          const offers = await fetchUnmappedOffers(aspNetToken);
+          setMappedOffers(offers);
+          const fetchedCategories = await fetchCategories(aspNetToken);
+          setCategories(fetchedCategories);
+        } catch (error) {
+          setError("Failed to fetch offers");
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      loadMappedOffers();
+    }
+  }, [aspNetToken, navigate]);
 
   const handleSave = async () => {
     try {
       const postMappedOffers: PostMappedOffer[] = mappedOffers.map(mapToPostMappedOffer);
       const payload = { offers: postMappedOffers };
-      const response = await fetch('http://localhost:5290/api/updateOffers', {
+      const response = await fetch('https://localhost:7027/api/updateOffers', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${aspNetToken}`,
         },
         body: JSON.stringify(payload)
       });
@@ -77,15 +81,24 @@ export default function MappedOfferList() {
     );
   };
 
-  const handleIngredientSearch = async (query: string, offerId: number) => {
-    setIngredientQuery(query);
+  const handleIngredientSearch = (query: string, offerId: number) => {
+    setIngredientQueries(prevQueries => ({ ...prevQueries, [offerId]: query }));
     setActiveOfferId(offerId);
-    if (query.length > 2) {
-      const results = await fetchIngredients(query, aspNetToken);
-      setIngredientResults(results);
-    } else {
-      setIngredientResults([]);
+
+    // Clear previous timeout if it exists
+    if (debounceTimeout.current[offerId]) {
+      clearTimeout(debounceTimeout.current[offerId]);
     }
+
+    // Set a new timeout for the API call
+    debounceTimeout.current[offerId] = setTimeout(async () => {
+      if (query.length > 2 && aspNetToken != null) {
+        const results = await fetchIngredients(query, aspNetToken);
+        setIngredientResults(results);
+      } else {
+        setIngredientResults([]);
+      }
+    }, 500); // 0.5 seconds delay
   };
 
   const handleIngredientSelect = (ingredient: IngredientDto, offerId: number) => {
@@ -94,7 +107,7 @@ export default function MappedOfferList() {
         offer.id === offerId ? { ...offer, Ingredient: ingredient } : offer
       )
     );
-    setIngredientQuery('');
+    setIngredientQueries(prevQueries => ({ ...prevQueries, [offerId]: ingredient.name }));
     setIngredientResults([]);
     setActiveOfferId(null);
   };
@@ -109,7 +122,7 @@ export default function MappedOfferList() {
 
   return (
     <div className="p-4 bg-white shadow-md rounded-md">
-         <button 
+      <button 
         onClick={handleSave} 
         className="mt-4 p-2 bg-blue-500 text-white rounded-md"
       >
@@ -151,7 +164,7 @@ export default function MappedOfferList() {
             <label className="block text-gray-700">Ingredient:</label>
             <input
               type="text"
-              value={activeOfferId === offer.id ? ingredientQuery : ''}
+              value={ingredientQueries[offer.id] || ''}
               onChange={(e) => handleIngredientSearch(e.target.value, offer.id)}
               className="mt-1 p-2 block w-full border border-gray-300 rounded-md"
               placeholder="Search for ingredient"
@@ -172,7 +185,6 @@ export default function MappedOfferList() {
           </div>
         </div>
       ))}
-     
     </div>
   );
 }

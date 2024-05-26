@@ -54,7 +54,7 @@ public class ProductService:IProductService
     {
         var response = new List<MapOfferDto>();
         var offers = await  _dbContext.ProductRecords
-            .Where(p => p.IsReviewed == false).Take(10).ToListAsync();
+            .Where(p => p.IsReviewed == false).Take(5).ToListAsync();
         
         for (int i = 0; i < offers.Count; i++)
         {

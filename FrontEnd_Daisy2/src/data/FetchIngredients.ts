@@ -49,7 +49,7 @@ export const fetchCategories = async (token: string): Promise<Category[]> => {
     });
     const data = await response.json();
     return data.categories.map((item: Category) => ({
-        Id: item.id,
-        Name: item.name,
+        id: item.id,
+        name: item.name,
     }));
 };
