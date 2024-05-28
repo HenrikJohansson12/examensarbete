@@ -18,5 +18,4 @@ public class ProductRecordDto
         public string Category { get; set; }
         public double DiscountPercent { get; set; }
         
-    
 }

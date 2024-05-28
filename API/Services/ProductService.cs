@@ -44,7 +44,7 @@ public class ProductService:IProductService
 
         for (int i = 0; i < productRecords.Count; i++)
         {
-            productRecordList.Add(ProductRecordToDTO.To(productRecords[i]));
+            productRecordList.Add(ProductRecordToDto.To(productRecords[i]));
         }
         
         return productRecordList;

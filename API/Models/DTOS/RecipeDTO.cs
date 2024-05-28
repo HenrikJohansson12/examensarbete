@@ -25,7 +25,7 @@ public class IngredientToRecipeDto
 public class IngredientDTO
 {
     public int Id { get; set; }
-    public int SlvIngredientId { get; set; }
+    public int? SlvIngredientId { get; set; }
     
     public string Name { get; set; }
 }

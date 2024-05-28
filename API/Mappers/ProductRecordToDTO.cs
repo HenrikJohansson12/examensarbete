@@ -2,7 +2,7 @@
 using Database.Models;
 namespace API.Mappers;
 
-public class ProductRecordToDTO
+public class ProductRecordToDto
 {
     public static ProductRecordDto To(ProductRecord productRecord)
     {
@@ -23,7 +23,6 @@ public class ProductRecordToDTO
             StoreName = productRecord.Store.Name,
             DiscountPercent =(double) ((productRecord.Price - productRecord.DiscountedPrice) / productRecord.Price)*100,
             Category = productRecord.Category.Name
-            
         };
         return dto;
     }

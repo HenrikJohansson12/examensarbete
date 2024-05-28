@@ -32,7 +32,7 @@ export default function AddIngredients() {
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(async () => {
-      if (ingredientQuery.length > 3 && aspNetToken) {
+      if (ingredientQuery.length > 2 && aspNetToken) {
         const results = await fetchIngredients(ingredientQuery, aspNetToken);
         setIngredientResults(results);
       } else {
