@@ -25,7 +25,7 @@ export default function CreateRecipe() {
   const handleSave = async () => {
     if (aspNetToken != null){
     try {   
-      const response = await fetch("http://localhost:7027/api/saverecipe", {
+      const response = await fetch("https://localhost:7027/api/saverecipe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -166,9 +166,6 @@ export default function CreateRecipe() {
             <button>close</button>
           </form>
         </dialog>
-        <h2>Tillagda ingredienser</h2>
-        <IngredientsList />
-      <div>
         <button
           className="btn btn-primary w-full max-w-xs"
           onClick={() => {
@@ -180,6 +177,10 @@ export default function CreateRecipe() {
         >
           Förhandsgranska
         </button>
+        <h2>Tillagda ingredienser</h2>
+        <IngredientsList />
+      <div>
+  
       </div>
 
       </div>

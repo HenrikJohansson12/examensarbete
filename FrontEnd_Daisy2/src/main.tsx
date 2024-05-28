@@ -16,6 +16,7 @@ import ViewRecipes from './routes/pages/ViewRecipes.tsx';
 import { Provider } from 'react-redux';
 import store from './redux/store.ts';
 import MyProfile from './routes/pages/MyProfile.tsx';
+import RecommendedRecipePage from './components/RecommendedRecipeCard.tsx';
 
 
 const router = createBrowserRouter([
@@ -55,10 +56,15 @@ const router = createBrowserRouter([
           {
             path: "",
             element: <ViewRecipes />
+            
           },
           {
             path: "new",
             element: <CreateRecipe />
+          },
+          {
+            path: "recipe/:recipeId",
+            element: <RecommendedRecipePage />
           }
         ]
       },

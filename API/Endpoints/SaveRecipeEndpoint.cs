@@ -15,7 +15,7 @@ public class SaveRecipeEndpoint: Endpoint<SaveRecipeRequest>
     public override void Configure()
     {
         Post("/api/saverecipe");
-        AllowAnonymous();
+       
     }
     public override async Task HandleAsync(SaveRecipeRequest req, CancellationToken ct)
     {
